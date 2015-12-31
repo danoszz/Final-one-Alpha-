@@ -57,6 +57,7 @@ body:before, body:after {
     left: 0;
     right: 0;
     height: 15px;
+    z-index: 5;
      -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -64,12 +65,14 @@ body:before, body:after {
 body:before {
 
     top: 0;
+    z-index: 5;
 
 }
 
 body:after {
 
     bottom: 0;
+    z-index: 5;
 
 }
 
@@ -489,22 +492,6 @@ article > h2 + p {
     background: #4C00EC;
 }
 
-/* Overlay closing cross */
-
-.overlay .overlay-close {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    overflow: hidden;
-    border: none;
-    background: url(../img/cross.png) no-repeat center center;
-    text-indent: 200%;
-    color: transparent;
-    outline: none;
-    z-index: 100;
-}
 
 /* Menu style */
 
@@ -891,7 +878,6 @@ img {
 
     width: 100%;
     height: auto;
-    pointer-events: none;
 }
 
 .show {
@@ -904,9 +890,14 @@ img {
     display: none;
 }
 
-.profilepic {
+.profile-pic {
 
     width: 80%;
+}
+
+#toggle-pic > img:nth-child(2) {
+
+    display: none;
 }
 
 /*----- About me page ------*/
@@ -1023,6 +1014,7 @@ img {
     position: relative;
     left: 20px;
     top: 20px;
+    margin-top: -10px;
 
 }
 
@@ -1228,7 +1220,7 @@ section {
         text-align: center;
     }
 
-    .profilepic {
+    .profile-pic {
 
         width: 50%;
     }
@@ -1237,6 +1229,16 @@ section {
 
 
 #panel {
+
+    display: none;
+}
+
+#panel-two {
+
+    display: none;
+}
+
+#panel-three {
 
     display: none;
 }

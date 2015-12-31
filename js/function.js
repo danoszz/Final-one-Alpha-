@@ -84,10 +84,13 @@ function validateForm() {
 
 
 // Toggle E,E,E,E
+// Need improvement --> Multiple ID's (one, two, three etc.) to one var --> var instead of ID
 
 
 
 $(document).ready(function(){
+
+
     $('#dvdz-toggle-one').change(function(){
         if(this.checked)
             $('#panel').slideDown('slow');
@@ -95,4 +98,34 @@ $(document).ready(function(){
             $('#panel').slideUp('slow');
 
     });
+});
+
+
+$(document).ready(function(){
+    $('#dvdz-toggle-two').change(function(){
+        if(this.checked)
+            $('#panel-two').slideDown('slow');
+        else
+            $('#panel-two').slideUp('slow');
+
+    });
+});
+
+$(document).ready(function(){
+    $('#dvdz-toggle-three').change(function(){
+        if(this.checked)
+            $('#panel-three').slideDown('slow');
+        else
+            $('#panel-three').slideUp('slow');
+
+    });
+});
+
+
+
+// Toggle Profile Pic
+
+
+$("#toggle-pic").click(function() {
+    $(this).find('img').toggle();
 });
