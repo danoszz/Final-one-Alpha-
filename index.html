@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>DVDZ Design</title>
+    <meta name="description" content="Daan van der Zwaags's Portfolio Website">
+
+    <!--- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+    <!--- CSS Styling -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--- Scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<header class="home">
+    <div class="header-content">
+    <h1>Daan van der</br>Zwaag.</h1>
+
+    <h2 class="type-text" title="Web and Graphik~1c^1000 \nDesigne~1^1000er;Front-end\nDeveloper^2000~2ment"></h2>
+
+    <div class="under-construction">
+        <p>Sorry! The new site is under construction. <a href="mailto:daan@dvdzdesign.nl">Mail me</a> or enter your password below.</p>
+
+        <form class="input-group" name="loginform" onSubmit="return validateForm();" action="portfolio.html" method="post">
+            <input id="inputText" type="text" class="form-control" name="pword" placeholder="Password">
+            <span class="input-group-btn">
+                <button class="btn-password" type="submit" value="Login">Go!</button>
+            </span>
+        </form>
+        <div id="error-message" class="hide"></div>
+
+
+</header>
+
+<button id="trigger-overlay" type="button" class="nav-button">
+    <span>Toggle</span>
+</button>
+
+        <div class="overlay overlay-slidedown">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+<script src="js/classie.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/function.js"></script>
+<script src="js/jquery.teletype.js"></script>
+
+<script>
+    $( function() {
+      $( '.type-text' ).each( function() {
+        var items = $( this ).attr( 'title' ) + ';' + $( this ).text();
+        $( this ).empty().attr( 'title', '' ).teletype( {
+          text: $.map( items.split( ';' ), $.trim ),
+          typeDelay: 20,
+          backDelay: 40,
+          cursor: '▋',
+          delay: 4000,
+          preserve: false,
+          prefix: '',
+          loop: 0
+        } );
+      } );
+    } );
+    </script>
+
+</body>
+</html>

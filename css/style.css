@@ -1,0 +1,1242 @@
+/* Copyright 2015 Daan van der Zwaag */
+
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Geometric_706';
+    src: url('fonts/geometric_706_medium-webfont.eot');
+    src: url('fonts/geometric_706_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geometric_706_medium-webfont.woff2') format('woff2'),
+         url('fonts/geometric_706_medium-webfont.woff') format('woff'),
+         url('fonts/geometric_706_medium-webfont.ttf') format('truetype'),
+         url('fonts/geometric_706_medium-webfont.svg#geometric_706medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*----- Basic CSS -----*/
+
+html {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #595959;
+    border-left: 15px solid #4C00EC;
+    border-right: 15px solid #4C00EC;
+
+}
+
+main {
+
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem;
+
+
+}
+
+
+/* Big Border */
+
+body:before, body:after {
+
+    content: "";
+    position: fixed;
+    background: #4C00EC ;
+    left: 0;
+    right: 0;
+    height: 15px;
+     -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+body:before {
+
+    top: 0;
+
+}
+
+body:after {
+
+    bottom: 0;
+
+}
+
+/*----- Parallaxify -----
+
+#home {
+
+    background:url('../img/bg-test-v6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@media screen and (max-width: 38em) {
+
+    #home {
+
+    background:url('../img/bg-test-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+
+    }
+
+
+}
+
+ -----*/
+
+
+
+/* Header */
+
+header {
+
+    height: 98.5vh;
+    width: 100%;
+    z-index: -10;
+
+}
+
+
+.header-content {
+
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem;
+    position: relative;
+
+
+}
+
+@media screen and (max-width: 30.5em) {
+
+
+    body {
+
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+
+}
+
+    body:before, body:after {
+
+        height: 0px;
+    }
+}
+
+.home {
+
+     overflow: hidden;
+
+}
+
+/*----- Typography -----*/
+
+p {
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-family: 'Geometric_706', 'Helvetica';
+    font-weight: 300;
+    color: #4C00EC;
+}
+
+header > div > h1 {
+
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 1em;
+
+}
+
+
+header > div > h2 {
+
+    font-size: 2.5em;
+    text-align: right;
+    height: 2em;
+
+}
+
+@media screen and (max-width: 48em) {
+
+    header > div > h1 {
+        font-size: 4em;
+        margin-bottom: 2em;
+    }
+
+    header > div > h2 {
+        font-size: 2em;
+        margin-bottom: 2em;
+    }
+
+}
+
+@media screen and (max-width: 44em) {
+
+    header > div > h1 {
+        font-size: 3.5em;
+        margin-bottom: 3.5em;
+    }
+
+    header > div > h2 {
+        font-size: 1.75em;
+        margin-bottom: 1.75em;
+    }
+
+     .header-content {
+        padding: 8%;
+    }
+
+}
+
+@media screen and (max-width: 38em) {
+
+    header > div > h1 {
+        font-size: 3em;
+    }
+
+    header > div > h2 {
+        font-size: 1.5em;
+        margin-bottom: 4em;
+    }
+
+
+}
+
+@media screen and (max-width: 30.5em) {
+
+    header > div > h1 {
+        font-size: 2.5em;
+        margin-bottom: 2.5em;
+    }
+
+    header > div > h2 {
+        font-size: 1.25em;
+        margin-bottom: 4em;
+    }
+
+}
+
+.lead-text {
+
+    font-family: 'Geometric_706', 'Helvetica';
+    font-weight: 300;
+    color: #595959;
+}
+
+/* Inverted Header */
+
+.header-inverted {
+
+    background-color: #4C00EC;
+    height: 80vh;
+    position: relative;
+    transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+}
+
+
+.header-inverted:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 80%;
+    margin-left: ;
+    width: 0;
+    height: 0;
+    border-top: solid 50px #4C00EC;
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;
+    transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+
+.header-inverted > div > h1 {
+
+    color: white;
+}
+
+.header-inverted > div > h2 {
+
+    color: white;
+}
+
+@media screen and (max-width: 44em) {
+
+    .header-inverted:after {
+
+    left: 70%;
+    border-top: solid 35px #4C00EC;
+    border-left: solid 35px transparent;
+    border-right: solid 35px transparent;
+    }
+}
+
+
+@media screen and (max-width: 30.5em) {
+
+    .header-inverted {
+
+        height: 50vh;
+
+    }
+
+     .header-inverted:after {
+
+    left: 70%;
+    border-top: solid 20px #4C00EC;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+    }
+
+}
+
+
+/*----- Under Construction  -----*/
+
+
+.under-construction {
+
+    width: 17.5rem;
+
+}
+
+.under-construction > p {
+
+    font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+    font-size: 0.9em;
+    color: rgb(112, 112, 112);
+
+}
+
+#error-message {
+
+    font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+    font-size: 0.9em;
+    position: relative;
+    min-height: 1em;
+    margin: 1em 0;
+    background: #f8f8f9;
+    padding: 1em 1.5em;
+    line-height: 1.4285em;
+    color: rgba(0,0,0,.87);
+    -webkit-transition: opacity .1s ease,color .1s ease,background .1s ease,box-shadow .1s ease;
+    transition: opacity .1s ease,color .1s ease,background .1s ease,box-shadow .1s ease;
+    box-shadow: 0 0 0 5px rgba(34,36,38,.22) inset,0 0 0 0 transparent;
+    background-color: #fff6f6;
+    color: #9f3a38;
+    box-shadow: 0 0 0 1px #e0b4b4 inset,0 0 0 0 transparent;
+
+
+}
+
+@media screen and (max-width: 30.5em) {
+
+    .under-construction {
+
+        width: 100%;
+    }
+
+}
+
+
+/*----- Under Construction | Link Styling -----*/
+
+.under-construction > p > a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    color: #4C00EC;
+    text-decoration: none;
+    font-weight: 400;
+
+}
+
+.under-construction > p > a:hover,
+.under-construction > p > a:focus {
+    outline: none;
+}
+
+
+.under-construction > p > a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 1.5px;
+    background: #4C00EC;
+    content: '';
+    opacity: 0;
+     -webkit-transform: translateY(8.5px);
+    -moz-transform: translateY(-8.5px);
+    transform: translateY(-8.5px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.under-construction > p >a:hover::after,
+.under-construction > p >a:focus::after {
+
+    width: 100%;
+    height: 1.5px;
+    opacity: 1;
+
+}
+
+
+
+
+
+article {
+
+    margin: 5% 0 10% 0;
+
+}
+
+article > h2 {
+
+    font-size: 2em;
+
+}
+
+article > h2 + p {
+
+    font-size: 0.9em;
+
+}
+
+/* Buttons */
+
+.btn {
+
+    padding: 10px 30px;
+    margin: 0px 0px 40px 0px;
+    text-decoration: none;
+    color: #4C00EC;
+    background-color: #fff;
+    border: 2.5px solid #4C00EC;
+    border-radius: 0px;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-transform: uppercase;
+
+}
+
+.btn:hover,
+.btn:focus {
+
+    outline: none;
+    background-color: #4C00EC;
+    color: #fff;
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.btn-xl {
+
+    width: 100%;
+    margin-top: 20%;
+
+}
+
+/*----- Menu Overlay -----*/
+
+/*
+ * All the credits go to Mary Lou
+ * I modifed her demo to achieve this style
+ * Full Screen Overlay Effects can be found at this URL:
+ * http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/
+ */
+
+
+/* Overlay style */
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #4C00EC;
+}
+
+/* Overlay closing cross */
+
+.overlay .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../img/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+}
+
+/* Menu style */
+
+.overlay nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.overlay ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 54px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+.overlay ul li a {
+    font-family: 'Geometric_706', 'Helvetica';
+    font-size: 5em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #29007F;
+}
+
+
+
+
+/* Effects */
+
+.overlay-slidedown {
+    visibility: hidden;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+    transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+}
+
+.overlay-slidedown.open {
+    visibility: visible;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+@media screen and (max-height: 30.5em) {
+    .overlay nav {
+        height: 70%;
+        font-size: 0.5em;
+    }
+    .overlay ul li {
+        min-height: 35px;
+    }
+}
+
+@media screen and (max-width: 30.5em) {
+    .overlay nav {
+        height: 50%;
+        font-size: 0.5em;
+    }
+
+}
+
+
+/*----- The Toggle Component -----*/
+
+/*
+ * All the credits go to CallMeNick.com
+ * I edited his demo to achieve this style
+ * CSS animating hamburger menu icons demo, which can be found at this url:
+ * https://github.com/callmenick/Animating-Hamburger-Icons
+ */
+
+
+#trigger-overlay {
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width: 30.5em) and (min-height: 30.5em) {
+  #trigger-overlay {
+    width: 75px;
+    height: 75px;
+    /* border-radius: 48px; */
+  }
+}
+
+.nav-button {
+
+  display: block;
+  position: absolute;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50pxpx;
+  background-color: #4C00EC;
+  font: inherit;
+  font-size: 0;
+  text-indent: -9999px;
+  /*border-radius: 24px; */
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+  /* reset some browser defaults */
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@media (min-width: 30.5em) and (min-height: 30.5em) {
+  .nav-button {
+    width: 75px;
+    height: 75px;
+    /*border-radius: 48px; */
+  }
+}
+
+.nav-button:hover,
+.nav-button:focus,
+.nav-button.is-active {
+  outline: none;
+  background-color: #4C00EC;
+}
+
+.nav-button.is-active {
+
+    border-radius: 0px;
+    transition: all 300ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+}
+
+.nav-button span,
+.nav-button span::before,
+.nav-button span::after {
+  display: block;
+  position: absolute;
+  height: 2.5px;
+  background: #fff;
+  /* border-radius: 1px;*/
+}
+@media (min-width: 30.5em) and (min-height: 30.5em) {
+  .nav-button span,
+  .nav-button span::before,
+  .nav-button span::after {
+    height: 5px;
+   /* border-radius: 2px; */
+  }
+}
+
+.nav-button span {
+  top: 23px;
+  left: 10px;
+  right: 10px;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+}
+@media (min-width: 30.5em) and (min-height: 30.5em) {
+  .nav-button span {
+    top: 35px;
+    left: 20px;
+    right: 20px;
+  }
+}
+
+.nav-button span::before,
+.nav-button span::after {
+  left: 0;
+  width: 100%;
+  content: "";
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+}
+
+.nav-button span::before {
+  top: -8px;
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+@media (min-width: 30.5em) and (min-height: 30.5em) {
+  .nav-button span::before {
+    top: -12px;
+  }
+}
+
+.nav-button span::after {
+  bottom: -8px;
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+@media (min-width: 30.5em) and (min-height: 30.5em) {
+  .nav-button span::after {
+    bottom: -12px;
+  }
+}
+
+/* button active state */
+
+.nav-button.is-active span {
+  background: none;
+}
+
+.nav-button.is-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
+
+.nav-button.is-active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
+
+
+/* ----- Forms ----- */
+
+.input-group {
+
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.input-group > .form-control {
+
+    display: table-cell;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 2.5px solid #4C00EC;
+    outline: none;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+}
+
+[placeholder]:focus:-moz-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+}
+
+[placeholder]:focus::-moz-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+[placeholder]:focus::-ms-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+   font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+
+}
+
+
+.input-group-btn {
+
+    display: table-cell;
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    margin-left: -1px;
+
+
+}
+
+.btn-password {
+
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/lock.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #4C00EC;
+    border: 2.5px solid #4C00EC;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: color 0.6s;
+    transition: color 0.6s;
+
+
+}
+
+.btn-password:hover {
+
+    background-image: url(../img/Lock_open_color_new.png);
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+    -webkit-transition: color 0.6s;
+    transition: color 0.6s;
+
+}
+
+/* Random CSS Shit */
+
+img {
+
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.show {
+
+    display: block;
+}
+
+.hide {
+
+    display: none;
+}
+
+.profilepic {
+
+    width: 80%;
+}
+
+/*----- About me page ------*/
+
+
+.small-timeline {
+    padding: 0;
+    padding-top: 50px;
+    list-style: none;
+    position: relative;
+    z-index: -1;
+}
+
+/* The line */
+
+.small-timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    left: 20px;
+    background: #4C00EC;
+}
+
+.small-timeline > li {
+    position: relative;
+}
+
+/* Right content */
+
+.small-timeline > li {
+
+    padding-bottom: 10%;
+
+}
+
+.small-timeline > li:last-child {
+
+    padding-bottom: 0;
+}
+
+.small-timeline > li .timeline-event {
+
+    font-weight: 300;
+    position: relative;
+    padding-left: 11%;
+
+}
+
+.event-location {
+
+    color: #242424;
+}
+
+
+/* The Circles & End */
+
+
+.small-timeline > li .timeline-circle {
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    color: #fff;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #4C00EC;
+    text-align: center;
+    top: 0;
+    left: 12.5px;
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.small-timeline > li:nth-child(1) .timeline-circle  {
+
+
+    background: #4C00EC;
+
+}
+
+.timeline-end {
+
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    background: #4C00EC;
+    text-align: center;
+    left: 12.5px;
+
+}
+
+.timeline-end:after {
+
+    content: '';
+    width: 20px;
+    height: 5px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #4C00EC;
+    text-align: center;
+    margin-top: 12.5px;
+
+}
+
+
+/* Switch Button /// Thanks to Call me Nick for the basic */
+
+.switch {
+
+    position: relative;
+    left: 20px;
+    top: 20px;
+
+}
+
+.dvdz-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.dvdz-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.dvdz-toggle + label {
+  padding: 2px;
+  width: -moz-calc(100% - 20px);
+  width: -webkit-calc(100% - 20px);
+  width: -o-calc(100% - 20px);
+  width: calc(100% - 20px);
+  height: 2.5rem;
+  background-color: #fff;
+  border: 5px #4C00EC solid;
+  transition: background 0.4s;
+}
+input.dvdz-toggle + label:before,
+input.dvdz-toggle + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+  line-height: 2.5em;
+  font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+  font-size: 0.9em;
+  font-weight: 600;
+
+}
+
+input.dvdz-toggle + label:before {
+  top: 5px;
+  left: 5px;
+  bottom: 0;
+  right: 0;
+  padding-left: 17.5%;
+  content: attr(data-on);
+  color: #4C00EC;
+  backface-visibility: hidden;
+  transition: background 0.4s;
+}
+input.dvdz-toggle + label:after {
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  width: 50%;
+  background-color: #4C00EC;
+  color: #fff;
+  text-align: center;
+  content: attr(data-off);
+  backface-visibility: hidden;
+  transition: margin 0.4s, background 0.4s;
+}
+input.dvdz-toggle:checked + label {
+  background-color: #fff;
+}
+
+input.dvdz-toggle:checked + label:after {
+
+    margin-left: -moz-calc(50% - 10px);
+    margin-left: -webkit-calc(50% - 10px);
+    margin-left: -o-calc(50% - 10px);
+    margin-left: calc(50% - 10px);
+    background-color: #4C00EC;
+    color: #4C00EC;
+
+
+}
+
+@media screen and (max-width: 64em) {
+
+     input.dvdz-toggle + label:before {
+
+        content: 'Yes please';
+        padding-left: 10%;
+    }
+
+    input.dvdz-toggle + label:after {
+
+        content: 'Nope';
+    }
+
+}
+
+@media screen and (max-width: 44em) {
+
+    .switch {
+
+        left: 0;
+    }
+
+    .small-timeline:before {
+
+        left: 0;
+    }
+
+    .small-timeline > li .timeline-circle, timeline-end {
+
+        left: -7px;
+
+    }
+
+}
+
+/* Own Grid */
+
+
+section {
+
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.row {
+
+
+    box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+
+}
+
+.one-third {
+
+  -ms-flex-preferred-size: 30%;
+  -webkit-flex-basis: 30%;
+  flex-basis: 30%;
+  max-width: 30%;
+  text-align: right;
+
+}
+
+.two-third {
+
+  -ms-flex-preferred-size: 60%;
+  -webkit-flex-basis: 60%;
+  flex-basis: 60%;
+  max-width: 60%;
+  padding-left: 6.667%;
+
+}
+
+.special-toggle-column {
+
+  padding-left: -moz-calc(6.667% - 20px);
+  padding-left: -webkit-calc(6.667% - 20px);
+  padding-left: -o-calc(6.667% - 20px);
+  padding-left: calc(6.667% - 20px);
+
+}
+
+@media screen and (max-width: 44em) {
+
+    main {
+
+        padding: 15%;
+    }
+
+    .one-third, .two-third {
+
+        -ms-flex-preferred-size: 100%;
+        -webkit-flex-basis: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    body > main > section > div.one-third {
+
+        text-align: left;
+
+    }
+
+    body > main > section:nth-child(1) > div.one-third {
+
+        text-align: center;
+    }
+
+    .profilepic {
+
+        width: 50%;
+    }
+
+}
+
+
+#panel {
+
+    display: none;
+}
