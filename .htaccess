@@ -1,5 +1,29 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+ErrorDocument 400 /lost.html
+ErrorDocument 401 /lost.html
+ErrorDocument 402 /lost.html
+ErrorDocument 403 /lost.html
+ErrorDocument 404 /lost.html
+ErrorDocument 405 /lost.html
+ErrorDocument 406 /lost.html
+ErrorDocument 407 /lost.html
+ErrorDocument 408 /lost.html
+ErrorDocument 409 /lost.html
+ErrorDocument 410 /lost.html
+ErrorDocument 411 /lost.html
+ErrorDocument 412 /lost.html
+ErrorDocument 413 /lost.html
+ErrorDocument 414 /lost.html
+DirectoryIndex /new/index.html
+order deny,allow
 
-ErrorDocument 404 /404.html
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+

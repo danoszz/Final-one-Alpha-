@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+    <style>
+
+
+
+        html {
+            color: #242424;
+            display: table;
+            font-family: 'Source Code Pro', 'sans-serif';
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            font-family: 'Source Code Pro', 'Helvetica';
+            font-weight: 300;
+            font-size: 5em;
+            color: #4C00EC;
+        }
+
+        p {
+            margin: 0 auto;
+
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            outline: none;
+            color: #4C00EC;
+            text-decoration: none;
+            font-weight: 400;
+
+        }
+
+        a:hover,
+        a:focus {
+            outline: none;
+        }
+
+
+        a::after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0%;
+            height: 1.5px;
+            background: #4C00EC;
+            content: '';
+            opacity: 0;
+             -webkit-transform: translateY(8.5px);
+            -moz-transform: translateY(-8.5px);
+            transform: translateY(-8.5px);
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+
+        }
+
+        a:hover::after,
+        a:focus::after {
+
+            width: 100%;
+            height: 1.5px;
+            opacity: 1;
+
+        }
+
+        @media only screen and (max-width: 44em) {
+
+            body, p {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 2.5em;
+                margin: 0 0 0.3em;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>I think you are lost..</h1>
+    <a href="index.html">Let me take you back!</a>
+</body>
+</html>
