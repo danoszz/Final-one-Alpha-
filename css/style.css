@@ -33,6 +33,7 @@ body {
     color: #595959;
     border-left: 15px solid #4C00EC;
     border-right: 15px solid #4C00EC;
+    overflow-x: hidden;
 
 }
 
@@ -215,8 +216,14 @@ header > div > h2 {
     }
 
      .header-content {
-        padding: 13.7%;
+        padding: 12.5%;
     }
+
+    body > main > section:nth-child(1) > div.two-third {
+
+        text-align: center;
+    }
+
 
 }
 
@@ -320,11 +327,14 @@ header > div > h2 {
 
     .header-inverted {
 
-        height: 50vh;
+    height: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
 
     }
 
-     .header-inverted:after {
+    .header-inverted:after {
 
     left: 70%;
     border-top: solid 20px #4C00EC;
@@ -600,7 +610,6 @@ article > h2 + p {
 
 }
 
-
 /*----- The Toggle Component -----*/
 
 /*
@@ -609,7 +618,6 @@ article > h2 + p {
  * CSS animating hamburger menu icons demo, which can be found at this url:
  * https://github.com/callmenick/Animating-Hamburger-Icons
  */
-
 
 #trigger-overlay {
 
@@ -924,7 +932,7 @@ img {
 
 .small-timeline {
     padding: 0;
-    padding-top: 50px;
+    padding-top: 2rem;
     list-style: none;
     position: relative;
     z-index: -1;
@@ -942,15 +950,13 @@ img {
     background: #4C00EC;
 }
 
-.small-timeline > li {
-    position: relative;
-}
 
 /* Right content */
 
 .small-timeline > li {
 
-    padding-bottom: 10%;
+    position: relative;
+    padding-bottom: 1.5rem;
 
 }
 
@@ -963,7 +969,7 @@ img {
 
     font-weight: 300;
     position: relative;
-    padding-left: 11%;
+    padding-left: 5rem;
 
 }
 
@@ -1066,7 +1072,7 @@ input.dvdz-toggle + label:after {
   display: block;
   position: absolute;
   content: "";
-  line-height: 2.5em;
+  line-height: 2.4em;
   font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
   font-size: 0.9em;
   font-weight: 600;
@@ -1076,8 +1082,8 @@ input.dvdz-toggle + label:after {
 input.dvdz-toggle + label:before {
   top: 5px;
   left: 5px;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 5px;
   padding-left: 17.5%;
   content: attr(data-on);
   color: #4C00EC;
@@ -1107,7 +1113,7 @@ input.dvdz-toggle:checked + label:after {
     margin-left: -o-calc(50% - 10px);
     margin-left: calc(50% - 10px);
     background-color: #4C00EC;
-    color: #4C00EC;
+    color: transparent;
 
 
 }
@@ -1117,17 +1123,22 @@ input.dvdz-toggle:checked + label:after {
      input.dvdz-toggle + label:before {
 
         content: 'Yes please';
-        padding-left: 10%;
+        padding-left: 15%;
     }
 
     input.dvdz-toggle + label:after {
 
-        content: 'Nope';
+        content: 'No thanks';
     }
 
 }
 
 @media screen and (max-width: 44em) {
+
+     input.dvdz-toggle + label:before {
+
+        padding-left: 12.5%;
+    }
 
     .switch {
 
@@ -1152,38 +1163,51 @@ input.dvdz-toggle:checked + label:after {
         width: -o-calc(100% - 14px);
         width: calc(100% - 14px);
     }
+
+    .timeline-end {
+
+        left: -7px;
+    }
+
+    .small-timeline > li .timeline-event {
+
+
+    padding-left: 3rem;
+
+    }
+
 }
 
+@media screen and (max-width: 30.5em) {
+
+     input.dvdz-toggle + label:before {
+
+        padding-left: 7%;
+    }
+}
 /* Progress Bars */
 
-#skills span {
-    top: -30px;
-    left: 2%;
-    position: relative;
-    font-size: 1.4em;
-    font-weight: bolder;
-    font-family: monospace;
-    color: #fff;
-    display: none;
-}
 .progress-box {
 
-    height: 2.5rem;
+    height: 1.5rem;
     background-color: #fff;
-    border: 5px #4C00EC solid;
+    border: 2.5px solid transparent;
+    -moz-border-image: -webkit-linear-gradient(left, #4c00ec, #23006c);
+    -webkit-border-image: -o-linear-gradient(left, #4c00ec, #23006c);
+    border-image: linear-gradient(to right, #4c00ec, #23006c);
+    border-image-slice: 1;
     transition: background 0.4s;
+
 }
 
 progress {
 
+
     background: -webkit-linear-gradient(left, #4c00ec, #23006c);
     background: -o-linear-gradient(left, #4c00ec, #23006c);
     background: linear-gradient(to right, #4c00ec, #23006c);
-    border: 2px #fff solid;
-
-    top: 5px;
-  left: 5px;
-  bottom: 5px;
+    /* border: 5px #fff solid; */
+    height: 100%;
     width: 100%;
     transition: background 0.4s;
 }
@@ -1196,9 +1220,6 @@ progress::-webkit-progress-value {
     background: -webkit-linear-gradient(left, #4c00ec, #23006c);
     background: -o-linear-gradient(left, #4c00ec, #23006c);
     background: linear-gradient(to right, #4c00ec, #23006c);
-        top: 5px;
-  left: 5px;
-  bottom: 5px;
 
 }
 
@@ -1206,10 +1227,14 @@ progress::-moz-progress-bar {
     background: -webkit-linear-gradient(left, #4c00ec, #23006c);
     background: -o-linear-gradient(left, #4c00ec, #23006c);
     background: linear-gradient(to right, #4c00ec, #23006c);
-        top: 5px;
-  left: 5px;
-  bottom: 5px;
 }
+
+#skills > h3 {
+
+    font-size: 0.8em;
+    color: #242424;
+}
+
 
 
 /* Own Grid */
@@ -1217,14 +1242,13 @@ progress::-moz-progress-bar {
 
 section {
 
-    padding-top: 3rem;
-    margin-bottom: 3rem;
+    padding-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .row {
 
-
-    box-sizing: border-box;
+  box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -1277,7 +1301,7 @@ section {
 
     main {
 
-        padding: 15%;
+        padding: 12.5%;
     }
 
     .one-third, .two-third {
@@ -1316,17 +1340,22 @@ section {
 }
 
 
-#panel {
+#panel, #panel-two, #panel-three {
 
     display: none;
+    width: -moz-calc(100% + 34px);
+    width: -webkit-calc(100% + 34px);
+    width: -o-calc(100% + 34px);
+    width: calc(100% + 34px);
 }
 
-#panel-two {
+@media screen and (max-width: 44em) {
 
-    display: none;
-}
 
-#panel-three {
+    #panel, #panel-two, #panel-three {
 
-    display: none;
+        width: 100%;
+
+    }
+
 }

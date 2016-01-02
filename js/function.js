@@ -1,7 +1,9 @@
+/*global $:false */
+
 // Function big menu overlay
-(function() {
-    var triggerBttn = document.getElementById( 'trigger-overlay' ),
-        overlay = document.querySelector( 'div.overlay' );
+(function () {
+    var triggerBttn = document.getElementById('trigger-overlay'),
+        overlay = document.querySelector('div.overlay');
         transEndEventNames = {
             'WebkitTransition': 'webkitTransitionEnd',
             'MozTransition': 'transitionend',
@@ -87,7 +89,6 @@ function validateForm() {
 // Need improvement --> Multiple ID's (one, two, three etc.) to one var --> var instead of ID
 
 
-
 $(document).ready(function(){
 
 
@@ -122,7 +123,6 @@ $(document).ready(function(){
 });
 
 
-
 // Toggle Profile Pic
 
 
@@ -133,13 +133,14 @@ $("#toggle-pic").click(function() {
 
 // Progress Bars
 
-/*
 
 $(function() {
-  $('progress').each(function() {
-    var max = $(this).val();
-    $(this).val(0).animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
-            });
-});
 
-*/
+    $('#dvdz-toggle-three').change(function(){
+        if(this.checked)
+          $('progress').each(function() {
+            var max = $(this).val();
+            $(this).val(0).animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
+                    });
+        });
+});
