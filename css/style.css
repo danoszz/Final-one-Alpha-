@@ -40,14 +40,12 @@ body {
 
 main {
 
-    max-width: 70em;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
     padding: 5rem;
 
-
 }
-
 
 /* Big Border */
 
@@ -121,13 +119,10 @@ header {
 
 .header-content {
 
-    max-width: 70em;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
-    padding: -moz-calc(5rem + 30px);
-    padding: -webkit-calc(5rem + 30px);
-    padding: -o-calc(5rem + 30px);
-    padding: calc(5rem% + 30px);
+    padding: 8rem 5rem;
     position: relative;
 
 
@@ -452,28 +447,6 @@ p > a:focus::after {
     width: 100%;
     height: 1.5px;
     opacity: 1;
-
-}
-
-
-
-
-
-article {
-
-    margin: 5% 0 10% 0;
-
-}
-
-article > h2 {
-
-    font-size: 2em;
-
-}
-
-article > h2 + p {
-
-    font-size: 0.9em;
 
 }
 
@@ -807,10 +780,9 @@ article > h2 + p {
     display: table-cell;
     position: relative;
     float: left;
-    width: 100%;
+    width: 101%;
     margin-bottom: 0;
-    width: 100%;
-    height: 34px;
+    height: 50px;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
@@ -876,7 +848,7 @@ article > h2 + p {
     white-space: nowrap;
     width: 1%;
     vertical-align: middle;
-    margin-left: -1px;
+    margin-left: -4px;
 
 
 }
@@ -1053,7 +1025,6 @@ img {
 .switch {
 
     position: relative;
-    left: 20px;
     top: 20px;
     margin-top: -10px;
 
@@ -1074,10 +1045,7 @@ img {
 
 input.dvdz-toggle + label {
   padding: 2px;
-  width: -moz-calc(100% + 20px);
-  width: -webkit-calc(100% + 20px);
-  width: -o-calc(100% + 20px);
-  width: calc(100% + 20px);
+  width: 100%;
   height: 3.5rem;
   background-color: #fff;
   border: 5px #4C00EC solid;
@@ -1172,13 +1140,7 @@ input.dvdz-toggle:checked + label:after {
 
     }
 
-    input.dvdz-toggle + label {
 
-        width: -moz-calc(100% - 14px);
-        width: -webkit-calc(100% - 14px);
-        width: -o-calc(100% - 14px);
-        width: calc(100% - 14px);
-    }
 
     .timeline-end {
 
@@ -1201,6 +1163,35 @@ input.dvdz-toggle:checked + label:after {
         padding-left: 7%;
     }
 }
+
+#panel, #panel-two {
+
+    display: none;
+    width: -moz-calc(100% + 20px);
+    width: -webkit-calc(100% + 20px);
+    width: -o-calc(100% + 20px);
+    width: calc(100% + 20px);
+    right: 20px;
+}
+
+#panel-three {
+
+    display: none;
+    width: 100%;
+}
+
+@media screen and (max-width: 44em) {
+
+
+    #panel, #panel-two, #panel-three {
+
+    right: 0;
+    width: 100%;
+
+    }
+
+}
+
 /* Progress Bars */
 
 .progress-box {
@@ -1253,55 +1244,21 @@ progress::-moz-progress-bar {
 
 
 /*----- Portfolio Grid -----*/
-/*
-.grid {
-    position: relative;
-    margin: 0 auto;
+
+
+.portfolio-grid > article {
+
+    margin-bottom: 2em;
+}
+
+.portfolio-item {
+
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
+    background-color: #4C00EC;
 }
 
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-*/
-
-
-.grid {
-  background: #EEE;
-  /* center */
-  margin: 0 auto;
-}
-
-/* clearfix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.grid-item {
-  width: 180px;
-  height: 120px;
-  float: left;
-  background: #D26;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
-}
-
-.grid-item--height2 { height: 200px; }
-.grid-item--height3 { height: 260px; }
-
-/* Own Grid */
+/*----- Own Grid -----*/
 
 
 section {
@@ -1350,15 +1307,6 @@ section {
   margin-left: auto;
 }
 
-.special-toggle-column {
-
-  padding-left: -moz-calc(6.667% - 20px);
-  padding-left: -webkit-calc(6.667% - 20px);
-  padding-left: -o-calc(6.667% - 20px);
-  padding-left: calc(6.667% - 20px);
-
-}
-
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -1389,6 +1337,7 @@ section {
 
         margin-left: 0;
         margin-right: 0;
+
     }
 
     body > main > section > div.one-third {
@@ -1407,25 +1356,5 @@ section {
         width: 50%;
     }
 
-}
-
-
-#panel, #panel-two, #panel-three {
-
-    display: none;
-    width: -moz-calc(100% + 34px);
-    width: -webkit-calc(100% + 34px);
-    width: -o-calc(100% + 34px);
-    width: calc(100% + 34px);
-}
-
-@media screen and (max-width: 44em) {
-
-
-    #panel, #panel-two, #panel-three {
-
-        width: 100%;
-
-    }
 
 }
