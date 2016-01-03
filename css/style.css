@@ -634,7 +634,7 @@ p > a:focus::after {
   margin: 0;
   padding: 0;
   width: 50px;
-  height: 50pxpx;
+  height: 50px;
   background-color: #4C00EC;
   font: inherit;
   font-size: 0;
@@ -682,19 +682,17 @@ p > a:focus::after {
   position: absolute;
   height: 2.5px;
   background: #fff;
-  /* border-radius: 1px;*/
 }
 @media (min-width: 30.5em) and (min-height: 30.5em) {
   .nav-button span,
   .nav-button span::before,
   .nav-button span::after {
     height: 5px;
-   /* border-radius: 2px; */
   }
 }
 
 .nav-button span {
-  top: 23px;
+  top: 25px;
   left: 10px;
   right: 10px;
   -webkit-transition: background 0.3s;
@@ -1242,7 +1240,6 @@ progress::-moz-progress-bar {
     color: #242424;
 }
 
-
 /*----- Portfolio Grid -----*/
 
 
@@ -1255,7 +1252,7 @@ progress::-moz-progress-bar {
 
     width: 100%;
     height: 100%;
-    background-color: #4C00EC;
+    /* background-color: #4C00EC; */
 }
 
 /*----- Own Grid -----*/
@@ -1333,12 +1330,6 @@ section {
 
     }
 
-    .row {
-
-        margin-left: 0;
-        margin-right: 0;
-
-    }
 
     body > main > section > div.one-third {
 
@@ -1357,4 +1348,99 @@ section {
     }
 
 
+}
+
+
+/*----- Test Home Header -----*/
+
+.header-home-inverted {
+
+    background: -webkit-linear-gradient(bottom, #4c00ec, #3E109F);
+    background: -o-linear-gradient(bottom, #4c00ec, #3E109F);
+    background: linear-gradient(to top, #4c00ec, #3E109F);
+    height: 100vh;
+    position: relative;
+    transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    margin-left: -15px;
+    margin-right: -15px;
+    width: -moz-calc(100% + 30px);
+    width: -webkit-calc(100% + 30px);
+    width: -o-calc(100% + 30px);
+    width: calc(100% + 30px);
+    z-index: 10;
+
+}
+
+.header-home-content {
+
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.header-home-content > h1 {
+
+    font-size: 2em;
+    letter-spacing: .5em;
+     color: white;
+}
+
+.header-home-content > h2 {
+
+    text-align: center;
+    font-family: 'Source Code Pro';
+    font-size: 1.5em;
+    color: white;
+}
+
+.header-home-button {
+
+    background-color: transparent;
+
+}
+
+
+@media screen and (max-width: 44em) {
+
+
+    .header-home-content > h1 {
+
+        font-size: 1em;
+    }
+
+    .header-home-content > h2 {
+
+        font-size:  0.75em;
+    }
+
+}
+
+/*----- Scroll Fade In -----*/
+
+
+.bounce-up {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }

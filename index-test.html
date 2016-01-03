@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>DVDZ Design | Index Test</title>
+    <meta name="description" content="Daan van der Zwaags's Portfolio Website">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#3E109F">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3E109F">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3E109F">
+
+    <!--- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+    <!--- CSS Styling -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <!--- Scripts -->
+    <script src="js/vendor/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+
+<header class="header-home-inverted">
+    <div class="header-home-content bounce-up">
+        <h1>daan van der zwaag</h1>
+        <h2 class="type-text" title="web and graphik~1c^1000 designe~1^1000er;front-end developer^2000~2ment"></h2>
+    </div>
+</header>
+<button id="trigger-overlay" type="button" class="nav-button header-home-button">
+    <span>Toggle</span>
+</button>
+
+
+        <div class="overlay overlay-slidedown">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+<script src="js/vendor/classie.js"></script>
+<script src="js/vendor/jquery-2.1.4.min.js"></script>
+<script src="js/vendor/jquery.teletype.js"></script>
+<script src="js/main.js"></script>
+
+
+<script>
+    $( function() {
+      $( '.type-text' ).each( function() {
+        var items = $( this ).attr( 'title' ) + ';' + $( this ).text();
+        $( this ).empty().attr( 'title', '' ).teletype( {
+          text: $.map( items.split( ';' ), $.trim ),
+          typeDelay: 40,
+          backDelay: 40,
+          cursor: '▋',
+          delay: 4000,
+          preserve: false,
+          prefix: '',
+          loop: 0
+        } );
+      } );
+    } );
+    </script>
+
+</body>
+</html>
