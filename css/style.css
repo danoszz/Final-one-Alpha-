@@ -76,34 +76,6 @@ body:after {
 
 }
 
-/*----- Parallaxify -----
-
-#home {
-
-    background:url('../img/bg-test-v6.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    z-index: -1;
-}
-
-@media screen and (max-width: 38em) {
-
-    #home {
-
-    background:url('../img/bg-test-mobile.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    z-index: -1;
-
-    }
-
-
-}
-
- -----*/
-
 
 
 /* Header */
@@ -1211,7 +1183,6 @@ progress {
     background: -webkit-linear-gradient(left, #4c00ec, #23006c);
     background: -o-linear-gradient(left, #4c00ec, #23006c);
     background: linear-gradient(to right, #4c00ec, #23006c);
-    /* border: 5px #fff solid; */
     height: 100%;
     width: 100%;
     transition: background 0.4s;
@@ -1229,30 +1200,52 @@ progress::-webkit-progress-value {
 }
 
 progress::-moz-progress-bar {
-    background: -webkit-linear-gradient(left, #4c00ec, #23006c);
-    background: -o-linear-gradient(left, #4c00ec, #23006c);
-    background: linear-gradient(to right, #4c00ec, #23006c);
+    background-color: #fff;
+
 }
+
+
+
+/*
+.progress {
+  position: relative;
+  height: 31px;
+  background: rgb(255, 0, 0);
+  background: -moz-linear-gradient(left, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 0, 0, 1)), color-stop(100%, rgba(0, 255, 0, 1)));
+  background: -webkit-linear-gradient(left, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+  background: -o-linear-gradient(left, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+  background: linear-gradient(to right, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#00ff00', GradientType=1);
+}
+.amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transition: all 0.8s;
+  background: gray;
+  width: 0;
+}
+.progress:before {
+  content: attr(data-amount)"% Complete";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  text-align: center;
+  line-height: 31px;
+}
+
+*/
 
 #skills > h3 {
 
     font-size: 0.8em;
     color: #242424;
-}
-
-/*----- Portfolio Grid -----*/
-
-
-.portfolio-grid > article {
-
-    margin-bottom: 2em;
-}
-
-.portfolio-item {
-
-    width: 100%;
-    height: 100%;
-    /* background-color: #4C00EC; */
 }
 
 /*----- Own Grid -----*/
@@ -1443,4 +1436,225 @@ section {
   -o-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate3d(0px, 0px, 0px);
+}
+
+/*----- Portfolio Grid -----*/
+
+
+.portfolio-grid > article {
+
+    margin-bottom: 2em;
+}
+
+
+/*----- Figure Styling & Hover Portfolio Effects -----*/
+
+figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    background: #4c00ec;
+    text-align: center;
+    cursor: pointer;
+}
+
+figure picture img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    /* opacity: 0.8; */
+}
+
+figure figcaption {
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+    pointer-events: none;
+}
+
+figure figcaption,
+figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+
+figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    font-size: 0;
+    opacity: 0;
+}
+
+figure h2 {
+    font-family: 'Geometric_706', 'Helvetica';
+    font-weight: 300;
+    font-size: 2em;
+    letter-spacing: 4px;
+}
+
+
+figure h2,
+figure p {
+
+    margin: 0;
+}
+
+figure p {
+
+    font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+figure p span {
+
+    font-weight: 900;
+}
+
+/*---------------*/
+/***** Sadie *****/
+/*---------------*/
+
+figure.portfolio-item figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00EC9A;
+    background-image: url(../img/hover_icon_portfolio_new.png);
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    content: '';
+    opacity: 0;
+    -webkit-transform: translate3d(0,50%,0);
+    transform: translate3d(0,50%,0);
+}
+
+figure.portfolio-item h2 {
+    position: absolute;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    opacity: 0;
+    -webkit-transform: translate3d(0,90px,0);
+    transform: translate3d(0,90px,0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.portfolio-item figcaption::before,
+figure.portfolio-item p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.portfolio-item p {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+}
+
+figure.portfolio-item:hover h2 {
+    opacity: 1;
+    color: #fff;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.portfolio-item:hover figcaption::before ,
+figure.portfolio-item:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+figure.portfolio-item figcaption::after {
+
+    content:'';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50px);
+    margin-left: auto;
+    width: 0;
+    height: 0;
+    border-top: solid 50px #fff;
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;
+    transition: transform .2s ease-in-out;
+     -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+
+
+}
+
+figure.portfolio-item figcaption:hover::after {
+
+     -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-animation: bounce 2s infinite ease-in-out;
+    animation: bounce 2s infinite ease-in-out;
+
+}
+
+@-webkit-keyframes bounce {
+
+    0%, 100% {
+
+        -webkit-transform: translateY(-10px);
+        animation-timing-function: ease-out;
+    }
+
+    50%  {
+
+        -webkit-transform: translateY(-1px);
+        animation-timing-function: ease-in;
+    }
+}
+
+/*----- Small Hover + Responsiveness ------*/
+
+figure.portfolio-item figcaption.small::before {
+
+    background-size: 20%;
+
+}
+
+figcaption.small > h2  {
+
+   top: 65%;
+}
+
+
+@media screen and (max-width: 30.5em) {
+
+
+    figure.portfolio-item p  {
+
+        display: none;
+
+    }
+
+    figure.portfolio-item h2 {
+
+        font-size: 1em;
+    }
 }

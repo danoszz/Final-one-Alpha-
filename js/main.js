@@ -99,10 +99,6 @@ $(document).ready(function(){
             $('#panel').slideUp('slow');
 
     });
-});
-
-
-$(document).ready(function(){
     $('#dvdz-toggle-two').change(function(){
         if(this.checked)
             $('#panel-two').slideDown('slow');
@@ -110,10 +106,7 @@ $(document).ready(function(){
             $('#panel-two').slideUp('slow');
 
     });
-});
-
-$(document).ready(function(){
-    $('#dvdz-toggle-three').change(function(){
+     $('#dvdz-toggle-three').change(function(){
         if(this.checked)
             $('#panel-three').slideDown('slow');
         else
@@ -121,7 +114,6 @@ $(document).ready(function(){
 
     });
 });
-
 
 // Toggle Profile Pic
 
@@ -133,7 +125,6 @@ $("#toggle-pic").click(function() {
 
 // Progress Bars
 
-
 $(function() {
 
     $('#dvdz-toggle-three').change(function(){
@@ -144,6 +135,7 @@ $(function() {
                     });
         });
 });
+
 
 // Scroll Animation
 
@@ -173,3 +165,5 @@ function check_if_in_view() {
 
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
+
+
