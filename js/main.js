@@ -113,6 +113,13 @@ $(document).ready(function(){
             $('#panel-three').slideUp('slow');
 
     });
+    $('#dvdz-toggle-four').change(function(){
+        if(this.checked)
+            $('#panel-four').slideDown('slow');
+        else
+            $('#panel-four').slideUp('slow');
+
+    });
 });
 
 // Toggle Profile Pic
