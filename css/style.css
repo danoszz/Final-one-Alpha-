@@ -530,15 +530,19 @@ p > a:focus::after {
 
 .overlay {
     position: fixed;
-    width: 100%;
+    width: calc(100% - 60px);
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
     top: 0;
+    right: 0;
     left: 0;
     background: -webkit-linear-gradient(bottom, #3E109F, #4c00ec);
     background: -o-linear-gradient(bottom, #3E109F, #4c00ec);
     background: linear-gradient(to top, #3E109F, #4c00ec);
-    z-index: 15;
+    z-index: 2;
 }
+
 
 
 /* Menu style */
@@ -615,6 +619,10 @@ p > a:focus::after {
 }
 
 @media screen and (max-height: 30.5em) {
+
+    .overlay {
+        width: 100%;
+    }
     .overlay nav {
         height: 70%;
         font-size: 0.5em;
@@ -625,6 +633,9 @@ p > a:focus::after {
 }
 
 @media screen and (max-width: 30.5em) {
+     .overlay {
+        width: 100%;
+    }
     .overlay nav {
         height: 50%;
         font-size: 0.5em;
@@ -1318,12 +1329,6 @@ progress::-moz-progress-bar {
 /*----- Own Grid -----*/
 
 
-section {
-
-    padding-top: 1.25rem;
-    margin-bottom: 1.25rem;
-}
-
 .row {
 
   box-sizing: border-box;
@@ -1974,7 +1979,7 @@ div.front {
 
 .portfolio-header {
 
-    height: 50vh;
+    height: 85vh;
     background-size: 80%;
     background-repeat: no-repeat;
     background-color: #f04e23;
@@ -1986,19 +1991,29 @@ div.front {
     color: rgba(255, 255, 255, 0.4);
 }
 
+@media screen and (max-width: 44em) {
+
+.portfolio-header {
+
+    height: 50vh;
+
+    }
+
+}
 @media screen and (min-width: 60em) {
 
     .portfolio-header {
-    background-size: 70%;
+    background-size: 60%;
 
     }
+
 
 }
 
 @media screen and (min-width: 105em) {
 
     .portfolio-header {
-    background-size: 60%;
+    background-size: 50%;
 
     }
 
@@ -2009,7 +2024,7 @@ div.front {
 
 .hwh-bg {
 
-    background-image: url('../img/portfolio/header-test.png');
+    background-image: url('../img/portfolio/honkbalweekhaarlem_header_V1.png');
 
 }
 
@@ -2111,6 +2126,15 @@ li.nav-categories-list-item.next-item > a {
     font-size: 1em;
 }
 
+.with-who {
+
+    text-align: center;
+    color: #a6a6a6;
+    margin-top: 2em;
+}
+
+
+
 /* Full width shit */
 
 .full-width {
@@ -2133,7 +2157,6 @@ li.nav-categories-list-item.next-item > a {
     margin-left: auto;
     margin-right: auto;
     padding: 5rem;
-    height: 50vh;
 
 }
 
@@ -2143,6 +2166,11 @@ li.nav-categories-list-item.next-item > a {
     padding: 12.5%;
 
     }
+
+    .align-verticaly {
+    transform: translateY(-0%);
+    }
+
 
 }
 
@@ -2154,6 +2182,13 @@ li.nav-categories-list-item.next-item > a {
         top: 50%;
         transform: translateY(-50%);
     }
+
+    .max-width-column {
+
+    height: 50vh;
+
+    }
+
 
 }
 
@@ -2208,12 +2243,31 @@ li.nav-categories-list-item.next-item > a {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: cover;
+    margin-top: 2rem;
+    background-position: center center;
+
 
 }
 
 .hhw-full {
 
     background-image: url("../img/portfolio/honkbalweekhaarlem_fullpage_V1.png");
-    height: 2800px;
+    height: 200vw;
+}
+
+@media screen and (max-width: 44em) {
+
+    .full-webpage {
+
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+.btn-group-footer-nav {
+
+    justify-content: center;
+    background-color: #00EC9A;
 }
