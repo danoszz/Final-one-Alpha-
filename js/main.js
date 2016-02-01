@@ -174,3 +174,48 @@ $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
 
+// Blur Menu
+
+
+  $(document).ready(function(){
+
+    var back = 200;
+    var middle = 400;
+    var front = 600;
+    var YY,
+        offset,
+        sizeBack,
+        sizeMiddle,
+        sizeFront;
+
+    // For mouse users
+    $('html').mousemove(function(e){
+
+      offset = $('html').offset();
+      YY = e.clientY - offset.top;
+
+      sizeBack   = Math.abs(back-YY)/95;
+      sizeMiddle = Math.abs(middle-YY)/98;
+      sizeFront  = Math.abs(front-YY)/100;
+
+      // apply blur
+      $('.back').css({
+        '-webkit-filter': 'blur('+ (sizeBack) +'px)',
+        '-webkit-transform': 'translate3d(200px,'+ -YY/20 +'px,'+ -YY/20 +'px) rotate(45deg)',
+        '-moz-transform': 'translate3d(200px,'+ -YY/20 +'px,'+ -YY/20 +'px) rotate(45deg)',
+        'transform': 'translate3d(200px,'+ -YY/20 +'px,'+ -YY/20 +'px) rotate(45deg)'
+      });
+      $('.middle').css({
+        '-webkit-filter': 'blur('+ (sizeMiddle) +'px)',
+        '-webkit-transform': 'translate3d(200px,'+ -YY/15 +'px,'+ -YY/15 +'px) rotate(45deg)',
+        '-moz-transform': 'translate3d(200px,'+ -YY/15 +'px,'+ -YY/15 +'px) rotate(45deg)',
+        'transform': 'translate3d(200px,'+ -YY/15 +'px,'+ -YY/15 +'px) rotate(45deg)'
+      });
+      $('.front').css({
+        '-webkit-filter': 'blur('+ (sizeFront) +'px)',
+        '-webkit-transform': 'translate3d(200px,'+ -YY/10 +'px,'+ -YY/10 +'px) rotate(45deg)',
+        '-moz-transform': 'translate3d(200px,'+ -YY/10 +'px,'+ -YY/10 +'px) rotate(45deg)',
+        'transform': 'translate3d(200px,'+ -YY/10 +'px,'+ -YY/10 +'px) rotate(45deg)'
+      });
+    });
+  });
