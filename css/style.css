@@ -288,7 +288,7 @@ header > div > h2 {
     width: -webkit-calc(100% + 60px);
     width: -o-calc(100% + 60px);
     width: calc(100% + 60px);
-    z-index: 10;
+    z-index: 5;
 
 }
 
@@ -543,7 +543,12 @@ p > a:focus::after {
     z-index: 2;
 }
 
+.yolo {
 
+    width: 100%;
+    z-index: 20;
+
+}
 
 /* Menu style */
 
@@ -1348,7 +1353,6 @@ progress::-moz-progress-bar {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
 }
 
 .one-third {
@@ -1442,14 +1446,7 @@ progress::-moz-progress-bar {
     height: 100vh;
     position: relative;
     transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    /*
-    margin-left: -15px;
-    margin-right: -15px;
-    width: -moz-calc(100% + 30px);
-    width: -webkit-calc(100% + 30px);
-    width: -o-calc(100% + 30px);
-    width: calc(100% + 30px);
-    z-index: 10; */
+
 
 }
 
@@ -1623,6 +1620,10 @@ margin-right: auto;
 
 /*----- Portfolio Grid -----*/
 
+.portfolio-grid {
+
+    margin-top: 5rem;
+}
 
 .portfolio-grid > article {
 
@@ -1773,6 +1774,28 @@ figure.portfolio-item figcaption::before {
     transform: translate3d(0,50%,0);
 }
 
+figure.portfolio-item figcaption.small::before {
+
+    background-image: url(../img/hover_icon_portfolio_width_green.png);
+
+}
+
+figure.portfolio-item figcaption.notsosquare::before {
+
+    background-image: url(../img/hover_icon_portfolio_square_green.png);
+    background-size: 20%;
+
+}
+
+figure.portfolio-item figcaption.disabled-figcap::before {
+
+    background-image: 0;
+    background-size: 0;
+    background-color: transparent;
+
+}
+
+
 figure.portfolio-item h2 {
     position: absolute;
     top: 75%;
@@ -1785,6 +1808,13 @@ figure.portfolio-item h2 {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
+
+figcaption.notsosquare h2 {
+
+    top: 70%;
+    font-size: 1.2em;
+}
+
 
 figure.portfolio-item figcaption::before,
 figure.portfolio-item p {
@@ -1865,7 +1895,7 @@ figure.portfolio-item figcaption:hover::after {
 
 figure.portfolio-item figcaption.small::before {
 
-    background-size: 20%;
+    background-size: 40%;
 
 }
 
@@ -1874,6 +1904,21 @@ figcaption.small > h2  {
    top: 65%;
 }
 
+@media screen and (max-width: 44em) {
+
+    figure.portfolio-item figcaption.small::before {
+
+    background-image: url('../img/hover_icon_portfolio_xs.png');
+    background-size: 20%;
+    }
+
+    figure.portfolio-item figcaption::before {
+
+    background-image: url('../img/hover_icon_portfolio_xs.png');
+    background-size: 20%;
+    }
+
+}
 
 @media screen and (max-width: 30.5em) {
 
@@ -1888,6 +1933,8 @@ figcaption.small > h2  {
 
         font-size: 1em;
     }
+
+
 }
 
 /* Blur Menu Home */
@@ -1982,7 +2029,6 @@ div.front {
     height: 85vh;
     background-size: 80%;
     background-repeat: no-repeat;
-    background-color: #f04e23;
     background-position: bottom;
      -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -2025,6 +2071,32 @@ div.front {
 .hwh-bg {
 
     background-image: url('../img/portfolio/honkbalweekhaarlem_header_V1.png');
+    background-color: #f04e23;
+
+}
+
+.lariva-bg {
+
+    background-image: url('../img/portfolio/lariva_header_v2.png');
+    background-color: #169dee;
+
+}
+
+.dominic-bg {
+
+    /* Fallback */
+    background-image: url('../img/portfolio/dominic_header_V2.png');
+
+    /* CSS gradients */
+    background-image: url('../img/portfolio/dominic_header_V2.png'),
+                      -moz-linear-gradient(top, #50fadc, #59c8fa);
+    background-image: url('../img/portfolio/dominic_header_V2.png'),
+                      -webkit-linear-gradient(bottom, #59c8fa, #50fadc);
+    background-image: url('../img/portfolio/dominic_header_V2.png'),
+                      linear-gradient(to top, #59c8fa, #50fadc);
+
+    background-size: contain;
+
 
 }
 
@@ -2255,6 +2327,21 @@ li.nav-categories-list-item.next-item > a {
     background-image: url("../img/portfolio/honkbalweekhaarlem_fullpage_V1.png");
     height: 200vw;
 }
+
+.lariva-full {
+
+    background-image: url("../img/portfolio/lariva_fullpage_V1.png");
+    height: 200vw;
+}
+
+.dominic-full {
+
+    background-image: url("../img/portfolio/dominic_fullpage_V1.png");
+    height: 200vw;
+}
+
+
+
 
 @media screen and (max-width: 44em) {
 
