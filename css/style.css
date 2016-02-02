@@ -1622,7 +1622,7 @@ margin-right: auto;
 
 .portfolio-grid {
 
-    margin-top: 5rem;
+    margin-top: 3.5rem;
 }
 
 .portfolio-grid > article {
@@ -2100,6 +2100,13 @@ div.front {
 
 }
 
+.split-bg {
+
+    background-image: url('../img/portfolio/split_the_bill_header_V1.png');
+    background-color: #f15b58;
+
+}
+
 
 .portfolio-categories-list, .nav-categories-list {
 
@@ -2180,14 +2187,6 @@ li.nav-categories-list-item.next-item > a {
 
 }
 
-.align-verticaly {
-
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-}
-
 .portolio-intro-text {
 
     text-align: center;
@@ -2255,7 +2254,7 @@ li.nav-categories-list-item.next-item > a {
         transform: translateY(-50%);
     }
 
-    .max-width-column {
+    .half {
 
     height: 50vh;
 
@@ -2337,6 +2336,12 @@ li.nav-categories-list-item.next-item > a {
 .dominic-full {
 
     background-image: url("../img/portfolio/dominic_fullpage_V1.png");
+    height: 200vw;
+}
+
+.split-full {
+
+    background-image: url("../img/portfolio/split_the_bill_fullpage.png");
     height: 200vw;
 }
 
