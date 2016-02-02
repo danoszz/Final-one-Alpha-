@@ -1270,6 +1270,11 @@ input.dvdz-toggle:checked + label:after {
     width: 100%;
 }
 
+#panel-three {
+
+    margin: 2rem 0 3rem 0;
+}
+
 
 @media screen and (max-width: 44em) {
 
@@ -2107,6 +2112,13 @@ div.front {
 
 }
 
+.soulcycle-bg {
+
+    background-image: url('../img/portfolio/soulcycle_header_V1.png');
+    background-color: #1a1a1a;
+
+
+}
 
 .portfolio-categories-list, .nav-categories-list {
 
@@ -2343,6 +2355,12 @@ li.nav-categories-list-item.next-item > a {
 
     background-image: url("../img/portfolio/split_the_bill_fullpage.png");
     height: 200vw;
+}
+
+.soulcycle-full {
+
+    background-image: url("../img/portfolio/soulcycle_fullpage_V1.png");
+    height: 205vw;
 }
 
 
