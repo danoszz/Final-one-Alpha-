@@ -506,6 +506,9 @@ p > a:focus::after {
     .btn-inverted  {
         width: 100%;
         padding: 5%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
 }
@@ -710,9 +713,14 @@ p > a:focus::after {
 .nav-button:hover,
 .nav-button:focus {
   outline: none;
-  background-color: #4c00ec;
 }
 
+.nav-button:hover {
+
+
+  background-color: #4c00ec;
+
+}
 
 .nav-button.is-active {
 
@@ -1525,7 +1533,11 @@ progress::-moz-progress-bar {
 
     .header-home-content {
 
-        top: 10%;
+
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+
     }
 
 }
@@ -1633,11 +1645,14 @@ margin-right: auto;
 .portfolio-grid > article {
 
     margin-bottom: 2em;
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .portfolio-item {
 
-    transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 
@@ -1814,9 +1829,16 @@ figure.portfolio-item h2 {
     transition: opacity 0.35s, transform 0.35s;
 }
 
+figcaption.small h2 {
+
+    top: 60%;
+    font-size: 1.2em;
+
+}
+
 figcaption.notsosquare h2 {
 
-    top: 70%;
+    top: 60%;
     font-size: 1.2em;
 }
 
@@ -1909,9 +1931,24 @@ figcaption.small > h2  {
    top: 65%;
 }
 
-@media screen and (max-width: 44em) {
+@media screen and (max-width: 62em) {
 
-    figure.portfolio-item figcaption.small::before {
+    figcaption.tall h2,
+    figcaption.width h2 {
+
+    top: 60%;
+    font-size: 1.2em;
+
+    }
+
+    figure.portfolio-item figcaption.width::before {
+
+    background-image: url('../img/hover_icon_portfolio_xs.png');
+    background-size: 10%;
+    }
+
+    figure.portfolio-item figcaption.small::before,
+    figure.portfolio-item figcaption.notsosquare::before {
 
     background-image: url('../img/hover_icon_portfolio_xs.png');
     background-size: 20%;
@@ -2117,8 +2154,28 @@ div.front {
     background-image: url('../img/portfolio/soulcycle_header_V1.png');
     background-color: #1a1a1a;
 
+}
+
+.sprtz-bg {
+
+
+     /* Fallback */
+    background-image: url('../img/portfolio/sprtz_header_V1.png');
+
+    /* CSS gradients */
+    background-image: url('../img/portfolio/sprtz_header_V2.png'),
+                      -moz-linear-gradient(top, #ea6212, #000);
+    background-image: url('../img/portfolio/sprtz_header_V2.png'),
+                      -webkit-linear-gradient(bottom, #000, #ea6212);
+    background-image: url('../img/portfolio/sprtz_header_V2.png'),
+                      linear-gradient(to top, #000, #ea6212);
+
+    background-size: contain;
+
 
 }
+
+
 
 .portfolio-categories-list, .nav-categories-list {
 
@@ -2154,9 +2211,13 @@ div.front {
 
 li.nav-categories-list-item.next-item > a {
 
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
 }
 
+li.nav-categories-list-item.next-item > a:hover {
+
+    color: #00EC9A;
+}
 
 .portfolio-title {
 
@@ -2243,6 +2304,12 @@ li.nav-categories-list-item.next-item > a {
 
 }
 
+.half {
+
+    height: 50vh;
+
+    }
+
 @media screen and (max-width: 44em) {
 
     .max-width-column {
@@ -2254,6 +2321,11 @@ li.nav-categories-list-item.next-item > a {
     transform: translateY(-0%);
     }
 
+    .half {
+
+    height: 100%;
+
+    }
 
 }
 
@@ -2264,12 +2336,6 @@ li.nav-categories-list-item.next-item > a {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-    }
-
-    .half {
-
-    height: 50vh;
-
     }
 
 
@@ -2298,6 +2364,8 @@ li.nav-categories-list-item.next-item > a {
 
     margin-left: -3.5px;
 }
+
+
 
 @media screen and (max-width: 30.5em) {
 

@@ -17,13 +17,12 @@ ErrorDocument 411 /lost.html
 ErrorDocument 412 /lost.html
 ErrorDocument 413 /lost.html
 ErrorDocument 414 /lost.html
-DirectoryIndex /new/index.html
-order deny,allow
 
 
-RewriteEngine on
+Options -MultiViews
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 
