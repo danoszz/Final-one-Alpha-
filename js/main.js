@@ -64,26 +64,6 @@
 })();
 
 
-// Password Simple Authentication
-
-
-function validateForm() {
-
-        var pw = document.loginform.pword.value;
-        var password = "Fabrique";
-        var errorMessage = document.getElementById("error-message");
-
-        if (pw == password) {
-            return true;
-        }
-        else {
-
-            classie.remove( errorMessage, 'hide' )
-            document.getElementById("error-message").innerHTML = 'Sorry, wrong password!';
-            return false;
-        }
-  }
-
 
 // Toggle E,E,E,E
 // Need improvement --> Multiple ID's (one, two, three etc.) to one var --> var instead of ID
@@ -174,48 +154,16 @@ $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
 
-// Blur Menu
 
+//Hide fixed nav
 
-  $(document).ready(function(){
-
-    var back = 200;
-    var middle = 400;
-    var front = 600;
-    var YY,
-        offset,
-        sizeBack,
-        sizeMiddle,
-        sizeFront;
-
-    // For mouse users
-    $('html').mousemove(function(e){
-
-      offset = $('html').offset();
-      YY = e.clientY - offset.top;
-
-      sizeBack   = Math.abs(back-YY)/95;
-      sizeMiddle = Math.abs(middle-YY)/98;
-      sizeFront  = Math.abs(front-YY)/100;
-
-      // apply blur
-      $('.back').css({
-        '-webkit-filter': 'blur('+ (sizeBack) +'px)',
-        '-webkit-transform': 'translate3d(200px,'+ -YY/20 +'px,'+ -YY/20 +'px) rotate(45deg)',
-        '-moz-transform': 'translate3d(200px,'+ -YY/20 +'px,'+ -YY/20 +'px) rotate(45deg)',
-        'transform': 'translate3d(200px,'+ -YY/20 +'px,'+ -YY/20 +'px) rotate(45deg)'
-      });
-      $('.middle').css({
-        '-webkit-filter': 'blur('+ (sizeMiddle) +'px)',
-        '-webkit-transform': 'translate3d(200px,'+ -YY/15 +'px,'+ -YY/15 +'px) rotate(45deg)',
-        '-moz-transform': 'translate3d(200px,'+ -YY/15 +'px,'+ -YY/15 +'px) rotate(45deg)',
-        'transform': 'translate3d(200px,'+ -YY/15 +'px,'+ -YY/15 +'px) rotate(45deg)'
-      });
-      $('.front').css({
-        '-webkit-filter': 'blur('+ (sizeFront) +'px)',
-        '-webkit-transform': 'translate3d(200px,'+ -YY/10 +'px,'+ -YY/10 +'px) rotate(45deg)',
-        '-moz-transform': 'translate3d(200px,'+ -YY/10 +'px,'+ -YY/10 +'px) rotate(45deg)',
-        'transform': 'translate3d(200px,'+ -YY/10 +'px,'+ -YY/10 +'px) rotate(45deg)'
-      });
-    });
-  });
+$(window).scroll(function(){
+  var threshold = 200; // number of pixels before bottom of page that you want to start fading
+  var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
+    if( op <= 0 ){
+        $(".hide-on-scroll").hide();
+    } else {
+        $(".hide-on-scroll").show();
+    }
+    $(".hide-on-scroll").css("opacity", op );
+});
