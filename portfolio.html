@@ -210,13 +210,32 @@
 <script src="js/vendor/jquery-2.1.4.min.js"></script>
 <script src="js/vendor/jquery-ui.min.js"></script>
 <script src="js/vendor/classie.js"></script>
+<script src="js/vendor/notificationFx.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+    if (!window.chrome) {
+        // create the notification
+        var notification = new NotificationFx({
+        message : '<p>Wow, your browser (Safari 9.0) does not support the <em>picture</em> element yet. Please switch to Chrome for the optimal experience. Otherwise you&#39;ll have to wait a bit longer. WebKit <a href="https://twitter.com/webkit/status/686657179365945344">promised</a> to release the update soon! :)</p>',
+        layout : 'bar',
+        effect : 'exploader',
+        ttl : 9000000,
+        type : 'notice', // notice, warning or error
+
+        });
+
+        // show the notification
+        notification.show();
+
+    }
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-59635505-1', 'auto');
   ga('send', 'pageview');
