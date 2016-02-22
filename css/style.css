@@ -353,104 +353,12 @@ header > div > h2 {
 }
 
 
-/*----- Under Construction  -----*/
-
-
-.under-construction {
-
-    width: 17.5rem;
-
-}
-
-.under-construction > p {
-
-    font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
-    font-size: 0.9em;
-    color: rgb(112, 112, 112);
-
-}
-
-#error-message {
-
-    font-family: 'Source Code Pro', 'Helvetica', 'Sans Serif';
-    font-size: 0.9em;
-    position: relative;
-    min-height: 1em;
-    margin: 1em 0;
-    background: #f8f8f9;
-    padding: 1em 1.5em;
-    line-height: 1.4285em;
-    color: rgba(0,0,0,.87);
-    -webkit-transition: opacity .1s ease,color .1s ease,background .1s ease,box-shadow .1s ease;
-    transition: opacity .1s ease,color .1s ease,background .1s ease,box-shadow .1s ease;
-    box-shadow: 0 0 0 5px rgba(34,36,38,.22) inset,0 0 0 0 transparent;
-    background-color: #fff6f6;
-    color: #9f3a38;
-    box-shadow: 0 0 0 1px #e0b4b4 inset,0 0 0 0 transparent;
-
-
-}
-
-@media screen and (max-width: 30.5em) {
-
-    .under-construction {
-
-        width: 100%;
-    }
-
-}
-
 a {
 
     outline: none;
     text-decoration: none;
 }
 
-/*----- Under Construction | Link Styling
-
-p > a {
-    position: relative;
-    display: inline-block;
-    outline: none;
-    color: #4C00EC;
-    text-decoration: none;
-    font-weight: 400;
-
-}
-
-p > a:hover,
-p > a:focus {
-    outline: none;
-}
-
-
-p > a::after {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0%;
-    height: 1.5px;
-    background: #4C00EC;
-    content: '';
-    opacity: 0;
-     -webkit-transform: translateY(8.5px);
-    -moz-transform: translateY(-8.5px);
-    transform: translateY(-8.5px);
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-
-}
-
-p > a:hover::after,
-p > a:focus::after {
-
-    width: 100%;
-    height: 1.5px;
-    opacity: 1;
-
-} -----*/
 
 /* Buttons */
 
@@ -690,14 +598,17 @@ p > a:focus::after {
   font-size: 0;
   text-indent: -9999px;
   -webkit-transition: background 0.3s;
-          transition: background 0.3s;
-  /* reset some browser defaults */
+  transition: background 0.3s;
   cursor: pointer;
   border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   box-shadow: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 
 }
 
@@ -706,27 +617,80 @@ p > a:focus::after {
   .nav-button {
     width: 75px;
     height: 75px;
-    /*border-radius: 48px; */
   }
-}
 
+}
 .nav-button:hover,
 .nav-button:focus {
   outline: none;
 }
 
-.nav-button:hover {
+  .nav-button:hover {
 
+    box-shadow: rgb(0, 220, 147) 1px 1px,
+    rgb(0, 220, 147) 2px 2px,
+    rgb(0, 220, 147) 3px 3px,
+    rgb(0, 220, 147) 4px 4px,
+    rgb(0, 220, 147) 5px 5px,
+    rgb(0, 220, 147) 6px 6px,
+    rgb(0, 220, 147) 7px 7px,
+    rgb(0, 220, 147) 8px 8px,
+    rgb(0, 220, 147) 9px 9px,
+    rgb(0, 220, 147) 10px 10px,
+    rgb(0, 220, 147) 11px 11px,
+    rgb(0, 220, 147) 12px 12px,
+    rgb(0, 220, 147) 13px 13px,
+    rgb(0, 220, 147) 14px 14px,
+    rgb(0, 220, 147) 15px 15px,
+    rgb(0, 220, 147) 16px 16px,
+    rgb(0, 220, 147) 17px 17px,
+    rgb(0, 220, 147) 18px 18px,
+    rgb(0, 220, 147) 19px 19px,
+    rgb(0, 220, 147) 20px 20px,
+    rgb(0, 220, 147) 21px 21px,
+    rgb(0, 220, 147) 22px 22px,
+    rgb(0, 220, 147) 23px 23px,
+    rgb(0, 220, 147) 24px 24px,
+    rgb(0, 220, 147) 25px 25px,
+    rgb(0, 220, 147) 26px 26px,
+    rgb(0, 220, 147) 27px 27px,
+    rgb(0, 220, 147) 28px 28px,
+    rgb(0, 220, 147) 29px 29px,
+    rgb(0, 220, 147) 30px 30px,
+    rgb(0, 220, 147) 31px 31px,
+    rgb(0, 220, 147) 32px 32px,
+    rgb(0, 220, 147) 33px 33px,
+    rgb(0, 220, 147) 34px 34px,
+    rgb(0, 220, 147) 35px 35px,
+    rgb(0, 220, 147) 36px 36px,
+    rgb(0, 220, 147) 37px 37px,
+    rgb(0, 220, 147) 38px 38px,
+    rgb(0, 220, 147) 39px 39px,
+    rgb(0, 220, 147) 40px 40px,
+    rgb(0, 220, 147) 41px 41px,
+    rgb(0, 220, 147) 42px 42px,
+    rgb(0, 220, 147) 43px 43px,
+    rgb(0, 220, 147) 44px 44px,
+    rgb(0, 220, 147) 45px 45px,
+    rgb(0, 220, 147) 46px 46px,
+    rgb(0, 220, 147) 47px 47px,
+    rgb(0, 220, 147) 48px 48px,
+    rgb(0, 220, 147) 49px 49px,
+    rgb(0, 220, 147) 50px 50px,
+    rgb(0, 220, 147) 51px 51px,
+    rgb(0, 220, 147) 52px 52px,
+    rgb(0, 220, 147) 53px 53px,
+    rgb(0, 220, 147) 54px 54px,
+    rgb(0, 220, 147) 55px 55px,
+    rgb(0, 220, 147) 56px 56px;
+   background-color: rgb(0, 255, 170);
 
-  background-color: #4c00ec;
-
-}
+    }
 
 .nav-button.is-active {
 
     outline: none;
-    background-color: transparent;
-
+    background-color:  hsl(160, 100%, 50%);
 }
 
 .nav-button span,
@@ -1057,7 +1021,7 @@ input.dvdz-toggle + label:after {
   text-align: center;
   content: attr(data-off);
   backface-visibility: hidden;
-  transition: margin 0.4s, background 0.4s;
+
 }
 input.dvdz-toggle:checked + label {
   background-color: transparent;
@@ -1072,6 +1036,18 @@ input.dvdz-toggle:checked + label:after {
     background-color: #4C00EC;
     color: transparent;
 
+
+}
+
+input.dvdz-toggle + label:hover::after {
+
+    transition: all 0.4s;
+    background: -webkit-linear-gradient(left, #4c00ec, #23006c);
+    background: -o-linear-gradient(left, #4c00ec, #23006c);
+    background: linear-gradient(to right, #4c00ec, #23006c);
+    -webkit-box-shadow: 5px 0px 10px 0px rgba(50, 50, 50, 0.31);
+-moz-box-shadow:    5px 0px 10px 0px rgba(50, 50, 50, 0.31);
+box-shadow:         5px 0px 10px 0px rgba(50, 50, 50, 0.31);
 
 }
 
@@ -1420,99 +1396,6 @@ progress::-moz-progress-bar {
 
     }
 
-}
-
-@media screen and (max-width: 30.5em) {
-
-       .header-home-button {
-
-        right: 30px;
-        bottom: 30px;
-    }
-
-}
-
-/*----- Home Menu -----*/
-
-.home-timeline {
-
- width: 80%;
- max-width: 1120px;
- margin-left: auto;
-margin-right: auto;
-}
-.home-timeline-bar {
-  position: relative;
-  background: #fff;
-  height: 5px;
-  width: 100%;
-}
-.timeline-point {
-  display: block;
-  background: #4C00EC;
-  border-radius: 50%;
-  box-shadow: 0 0 0 5px #fff;
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  z-index: 1;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-  cursor: pointer;
-}
-.timeline-point:hover {
-  -webkit-transform: scale(1.3);
-  -moz-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  -o-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-/* Calculate top: 0 - (heightbar + 2 + (heightcircle x ('2 of 3')) */
-
-.point-1 {
-  left: 0;
-  top: -7px;
-  background: hsl(160, 100%, 50%);
-  box-shadow: 0 0 0 5px hsl(160, 100%, 50%);
-}
-.point-2 {
-  left: 33.333%;
-  top: -27px;
-}
-.point-3 {
-  left: 66.667%;
-  top: -47px;
-}
-.point-4 {
-  left: 100%;
-  top: -67px;
-}
-
-
-/* Tooltips */
-.timeline-point[data-tooltip] {
-  position: relative;
-  cursor: pointer;
-}
-.timeline-point[data-tooltip]:after {
-  content: attr(data-tooltip);
-  background: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  border-radius: 2px;
-  padding: 5px 10px;
-  font-size: 13px;
-  border: none;
-  color: #fff;
-  bottom: 150%;
-  left: -100%;
-  display: none;
-  z-index: 999;
-}
-.timeline-point[data-tooltip]:hover:after {
-  display: block;
 }
 
 /*----- Portfolio Grid -----*/
@@ -1977,7 +1860,6 @@ figcaption.small > h2  {
 
 .sprtz-bg {
 
-
      /* Fallback */
     background-image: url('../img/portfolio/sprtz_header_V1.png');
 
@@ -1991,8 +1873,26 @@ figcaption.small > h2  {
 
     background-size: contain;
 
+}
+
+
+.others-bg {
+
+    /* Fallback */
+    background-image: url('../img/portfolio/others_header.png');
+
+    /* CSS gradients */
+    background-image: url('../img/portfolio/others_header.gif'),
+                      -moz-linear-gradient(top, #00ffaa, #3E109F);
+    background-image: url('../img/portfolio/others_header.gif'),
+                      -webkit-linear-gradient(bottom, #00ffaa, #3E109F);
+    background-image: url('../img/portfolio/others_header.gif'),
+                      linear-gradient(to top, #00ffaa, #3E109F);
+
+    background-size: contain;
 
 }
+
 
 
 .portfolio-categories-list, .nav-categories-list, .portfolio-extra-list {
