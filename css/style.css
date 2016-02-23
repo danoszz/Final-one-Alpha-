@@ -269,7 +269,10 @@ header > div > h2 {
     color: #242424;
 }
 
+.dark-text {
 
+    color: #242424
+}
 /* Inverted Header */
 
 .header-inverted {
@@ -504,12 +507,27 @@ a {
     text-decoration: none;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
-
+      -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-    color: hsl(160, 100%, 50%);
+
+      -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-shadow: rgb(0, 220, 147) 1px 1px,
+    rgb(0, 220, 147) 2px 2px,
+    rgb(0, 220, 147) 3px 3px,
+    rgb(0, 220, 147) 4px 4px,
+    rgb(0, 220, 147) 5px 5px,
+    rgb(0, 220, 147) 6px 6px,
+    rgb(0, 220, 147) 7px 7px,
+    rgb(0, 220, 147) 8px 8px;
 }
 
 
@@ -625,7 +643,8 @@ a {
   outline: none;
 }
 
-  .nav-button:hover {
+.nav-button.is-active,
+.nav-button:hover {
 
     box-shadow: rgb(0, 220, 147) 1px 1px,
     rgb(0, 220, 147) 2px 2px,
@@ -956,7 +975,10 @@ img {
 
 }
 
+div.one-third.text-right > h2 {
 
+    margin-top: 0;
+}
 /* Switch Button /// Thanks to Call me Nick for the basic */
 
 .switch {
@@ -1045,9 +1067,6 @@ input.dvdz-toggle + label:hover::after {
     background: -webkit-linear-gradient(left, #4c00ec, #23006c);
     background: -o-linear-gradient(left, #4c00ec, #23006c);
     background: linear-gradient(to right, #4c00ec, #23006c);
-    -webkit-box-shadow: 5px 0px 10px 0px rgba(50, 50, 50, 0.31);
--moz-box-shadow:    5px 0px 10px 0px rgba(50, 50, 50, 0.31);
-box-shadow:         5px 0px 10px 0px rgba(50, 50, 50, 0.31);
 
 }
 
@@ -1394,6 +1413,11 @@ progress::-moz-progress-bar {
     top: 30%;
     transform: translateY(-50%);
 
+    }
+
+    .header-home-content > h1 {
+
+        margin-top: 0;
     }
 
 }
