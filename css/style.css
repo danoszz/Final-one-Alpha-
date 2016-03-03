@@ -153,7 +153,8 @@ p {
 
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
-
+    line-height: 1.75em;
+    text-align: justify;
 
 }
 
@@ -208,6 +209,7 @@ header > div > h2 {
         margin-bottom: 2em;
     }
 
+
 }
 
 @media screen and (max-width: 44em) {
@@ -241,6 +243,10 @@ header > div > h2 {
         margin-bottom: 4em;
     }
 
+    p {
+
+        text-align: left;
+    }
 
 }
 
@@ -260,8 +266,7 @@ header > div > h2 {
 
 h1 + p {
 
-    font-family: 'Geometric_706', 'Helvetica';
-    font-weight: 300;
+    font-weight: 400;
     color: #242424;
 }
 
@@ -885,6 +890,7 @@ img {
     display: none;
      -webkit-transition: 0.5s ease;
             transition: 0.5s ease;
+
 }
 
 .small-timeline, .extra-list {
@@ -1728,6 +1734,7 @@ figure.portfolio-item p {
     opacity: 0;
     -webkit-transform: translate3d(0,10px,0);
     transform: translate3d(0,10px,0);
+    text-align: center;
 }
 
 figure.portfolio-item:hover h2 {
