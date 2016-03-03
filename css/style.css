@@ -226,10 +226,6 @@ header > div > h2 {
         padding: 12.5%;
     }
 
-    body > main > section:nth-child(1) > div.two-third {
-
-        text-align: center;
-    }
 
 
 }
@@ -262,7 +258,7 @@ header > div > h2 {
 
 }
 
-.lead-text {
+h1 + p {
 
     font-family: 'Geometric_706', 'Helvetica';
     font-weight: 300;
@@ -273,6 +269,7 @@ header > div > h2 {
 
     color: #242424
 }
+
 /* Inverted Header */
 
 .header-inverted {
@@ -432,6 +429,33 @@ a {
     width: 100%;
 
 }
+
+/*----- Link Styling -----*/
+
+p > a {
+
+    text-decoration: none;
+    position: relative;
+    color: #4C00EC;
+    -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
+
+p > a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #4C00EC;
+   -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
+
+p > a:hover:after {
+  width: 100%;
+}
+
 
 /*----- Menu Overlay -----*/
 
@@ -826,20 +850,49 @@ img {
     width: 80%;
 }
 
+#toggle-pic {
+
+    width: 100%;
+    margin-bottom: 10%;
+}
+
 #toggle-pic > img:nth-child(2) {
 
     display: none;
 }
 
+::-moz-selection {
+
+    background: hsl(160, 100%, 50%);;
+}
+::selection {
+    background: hsl(160, 100%, 50%);;
+}
+
+
+
 /*----- About me page ------*/
 
+#tldrClick {
+
+    color: #4C00EC;
+    cursor: pointer;
+
+}
+
+.tldr-text {
+
+    display: none;
+     -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
 
 .small-timeline, .extra-list {
     padding: 0;
     padding-top: 2rem;
     list-style: none;
     position: relative;
-    z-index: -1;
+
 }
 
 /* The line */
@@ -874,6 +927,12 @@ img {
     font-weight: 300;
     position: relative;
     padding-left: 5rem;
+
+}
+
+#skills > div.expertise-text > p {
+
+    font-weight: 300;
 
 }
 
@@ -1043,6 +1102,7 @@ input.dvdz-toggle + label:after {
   text-align: center;
   content: attr(data-off);
   backface-visibility: hidden;
+  transition: margin .4s ease-in-out;
 
 }
 input.dvdz-toggle:checked + label {
@@ -1058,12 +1118,10 @@ input.dvdz-toggle:checked + label:after {
     background-color: #4C00EC;
     color: transparent;
 
-
 }
 
 input.dvdz-toggle + label:hover::after {
 
-    transition: all 0.4s;
     background: -webkit-linear-gradient(left, #4c00ec, #23006c);
     background: -o-linear-gradient(left, #4c00ec, #23006c);
     background: linear-gradient(to right, #4c00ec, #23006c);
@@ -1147,11 +1205,11 @@ input.dvdz-toggle + label:hover::after {
     width: 100%;
 }
 
-#panel-three {
 
-    margin: 2rem 0 3rem 0;
+.expertise-text {
+
+    margin-top: 3em;
 }
-
 
 @media screen and (max-width: 44em) {
 

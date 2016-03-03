@@ -110,6 +110,14 @@ $("#toggle-pic").click(function() {
 });
 
 
+// Toggle TLDR
+
+$(function(){
+    $("#tldrClick").click(function(){
+        $(".tldr-text").toggle();
+    })
+});
+
 // Progress Bars
 
 $(function() {
