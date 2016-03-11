@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+    <style>
+
+        html {
+            color: #242424;
+            display: table;
+            font-family: 'Source Code Pro', 'sans-serif';
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            font-family: 'Source Code Pro', 'Helvetica';
+            font-weight: 300;
+            font-size: 5em;
+            color: #4C00EC;
+        }
+
+        p {
+            margin: 0 auto;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+            position: relative;
+            color: #4C00EC;
+            -webkit-transition: 0.5s ease;
+                    transition: 0.5s ease;
+        }
+
+        a:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          border-bottom: 2px solid #4C00EC;
+           -webkit-transition: 0.5s ease;
+                    transition: 0.5s ease;
+        }
+
+        a:hover:after {
+          width: 100%;
+        }
+
+
+
+        @media only screen and (max-width: 44em) {
+
+            body, p {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 2.5em;
+                margin: 0 0 0.3em;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>I think you are lost..</h1>
+    <a href="http://www.dvdzdesign.nl/">Let me take you back!</a>
+</body>
+</html>

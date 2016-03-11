@@ -1795,6 +1795,21 @@ figure.portfolio-item figcaption:hover::after {
     }
 }
 
+@keyframes bounce {
+
+    0%, 100% {
+
+        transform: translateY(-10px);
+        animation-timing-function: ease-out;
+    }
+
+    50%  {
+
+        PRevtransform: translateY(-1px);
+        animation-timing-function: ease-in;
+    }
+}
+
 /*----- Small Hover + Responsiveness ------*/
 
 figure.portfolio-item figcaption.small::before {
@@ -2202,7 +2217,7 @@ li.nav-categories-list-item.next-item > a:hover {
     outline: none;
     font-weight: 600;
     text-decoration: none;
-     -webkit-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
