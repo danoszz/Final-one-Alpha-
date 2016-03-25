@@ -132,6 +132,7 @@ $(function() {
 });
 
 
+
 // Scroll Animation
 
 var $animation_elements = $('.bounce-up');
