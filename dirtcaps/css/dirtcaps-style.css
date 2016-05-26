@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+/* force scrollbar */
+
+html {
+    overflow-y: scroll;
+}
+body {
+    font-family: 'Source Code Pro', 'sans serif';
+    background-color: black;
+}
+
+/* ---- grid ---- */
+
+.grid {
+    background-color: rgb(0, 0, 0);
+}
+
+/* clear fix */
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+.grid-item {
+    float: left;
+}
+.grid-item img {
+    display: block;
+    max-width: 100%;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.grid-item img:hover {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+/*---- Own code ----*/
+
+.background--bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 100px solid rgb(0, 220, 147);
+}
+.background--bar a img {
+    height: 50px;
+    width: auto;
+    position: relative;
+    bottom: 50px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.background--bar a img:hover {
+    transform: scale(0.9);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.logo--dirtcaps {
+    display: flex;
+    flex-direction: column;
+    margin: 5em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.logo--dirtcaps img {
+    width: 25%;
+}
+h1 {
+    color: white;
+    font-weight: 100;
+}
+h1 span {
+    color: rgb(0, 220, 147);
+}
+h1 + a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+h1 + a:hover {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    text-shadow: rgb(0, 220, 147) 1px 1px, rgb(0, 220, 147) 2px 2px, rgb(0, 220, 147) 3px 3px, rgb(0, 220, 147) 4px 4px, rgb(0, 220, 147) 5px 5px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;;
+    color: black;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+footer p {
+
+    margin: 5em 2em;
+    font-weight: 300;
+    max-width: 60em;
+}
+
+footer p a {
+
+    text-decoration: none;
+    position: relative;
+    color: #4C00EC;
+    -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
+
+footer p a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #4C00EC;
+   -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
+
+footer p a:hover:after {
+  width: 100%;
+}
+
+/* Important Styles */
+
+.images figure {
+    display: block;
+    margin: 0;
+    position: relative;
+}
+.images .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay--instagram {
+    background: url('../img/icons/instagram.svg') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.overlay--facebook {
+    background: url('../img/icons/facebook.svg') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.overlay--ello {
+    background: url('../img/icons/ello.svg') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.overlay--pinterest {
+    background: url('../img/icons/pinterest.svg') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.overlay--spotify {
+    background: url('../img/icons/spotify.png') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.overlay--tumblr {
+    background: url('../img/icons/tumblr.svg') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.overlay--behance {
+    background: url('../img/icons/behance.svg') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.overlay--dvdz {
+    background: url('../img/icons/dvdz.svg') 50% / 50px no-repeat, rgba(0, 0, 0, .5);
+}
+.images a:hover .overlay,
+.images a:focus .overlay {
+    opacity: 1;
+}
+
+/*
+.images a:hover figure img,
+.images a:focus figure img {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+*/
+
+.images-short--gif {
+    height: 23.8vw;
+}
+.short {
+    height: 23.8vw;
+}
+.credits {
+    margin-top: 100px;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+.credits span {
+    color: rgb(0, 220, 147);
+}
+@media screen and (max-width: 30.5em) {
+    .credits {
+        display: none;
+    }
+    .logo--dirtcaps img {
+        width: 40%;
+    }
+    .background--bar a img {
+        height: 30px;
+    }
+}
+
+/*--- Flexbox grid ---*/
+
+.flexgrid {
+    /*
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; */
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100;
+}
+.grid-item--flex {
+    width: 33.333%;
+}
+.grid-item--flex img {
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.grid-item--flex img:hover {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.element--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 30.5em) {
+    .grid-item--flex {
+        width: 100%;
+    }
+    .images-short--gif,
+    .short {
+        height: 100%;
+    }
+}

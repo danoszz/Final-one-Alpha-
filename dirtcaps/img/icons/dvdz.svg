@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <title>pinterest-light</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Social-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-50.000000, -50.000000)">
+            <g id="pinterest-light" transform="translate(52.000000, 52.000000)">
+                <rect id="Rectangle" stroke="#FFFFFF" stroke-width="3" x="0" y="0" width="44" height="44"></rect>
+                <g id="Logo-V1-Final-[Vector]" transform="translate(0.000000, 8.000000)" fill="#FFFFFF">
+                    <path d="M21.1622943,0.88267019 L21.1622943,0.88267019 L22.7869783,0.88267019 L8.16482241,15.3010194 L8.16482241,13.6989806 L22.7869783,28.1173298 L21.1622943,28.1173298 L35.7844502,13.6989806 L35.7844502,15.3010194 L21.1622943,0.88267019 Z M21.9746363,0.0816507899 L36.5967922,14.5 L21.9746363,28.9183492 L7.35248042,14.5 L21.9746363,0.0816507899 L21.9746363,0.0816507899 Z" id="Shape"></path>
+                    <polygon id="Shape" points="15.7429856 21.1876191 28.7248359 8.38671251 29.1310069 7.98620281 28.3186649 7.18518341 27.912494 7.58569311 14.9306436 20.3865997 14.5244726 20.7871094 15.3368146 21.5881288"></polygon>
+                    <g id="Line-+-Line" transform="translate(18.151436, 10.308594)">
+                        <polygon id="Shape" points="7.35248042 1.22576122 7.35248042 0.0929487179 0 0.0929487179 6.01853931e-16 1.22576122"></polygon>
+                        <polygon id="Shape" points="0 8.28986378 7.35248042 8.28986378 7.35248042 7.15705128 0 7.15705128"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

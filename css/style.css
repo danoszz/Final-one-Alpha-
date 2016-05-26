@@ -566,8 +566,8 @@ p > a:hover:after {
     visibility: hidden;
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.8s cubic-bezier(.645,.045,.355,1), visibility 0s 0.8s;
-    transition: transform 0.8s cubic-bezier(.645,.045,.355,1), visibility 0s 0.8s;
+    -webkit-transition: -webkit-transform 0.8s cubic-bezier(.64,.05,.35,1), visibility 0s 0.8s;
+    transition: transform 0.8s cubic-bezier(.64,.05,.35,1), visibility 0s 0.8s;
 
 }
 
@@ -575,8 +575,8 @@ p > a:hover:after {
     visibility: visible;
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
-    -webkit-transition: -webkit-transform 0.8s cubic-bezier(.645,.045,.355,1);
-    transition: transform 0.8s cubic-bezier(.645,.045,.355,1);
+    -webkit-transition: -webkit-transform 0.8s cubic-bezier(.64,.05,.35,1);
+    transition: transform 0.8s cubic-bezier(.64,.05,.35,1);
     transition-duration: 1s;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
@@ -1548,9 +1548,9 @@ progress::-moz-progress-bar {
     -webkit-transition-delay: 0,.3s;
     -moz-transition-delay: 0,.3s;
     transition-delay: 0,.3s;
-    -webkit-transition-timing-function: cubic-bezier(.645,.045,.355,1);
-    -moz-transition-timing-function: cubic-bezier(.645,.045,.355,1);
-    transition-timing-function: cubic-bezier(.645,.045,.355,1);
+    -webkit-transition-timing-function: cubic-bezier(.64,.05,.35,1);
+    -moz-transition-timing-function: cubic-bezier(.64,.05,.35,1);
+    transition-timing-function: cubic-bezier(.64,.05,.35,1);
     transition-duration: 1.5s;
   -moz-transform: translate3d(0px, 100px, 0px);
   -webkit-transform: translate3d(0px, 100px, 0px);
@@ -2664,4 +2664,11 @@ li.nav-categories-list-item.next-item > a:hover {
 @keyframes animFade {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+/*----- New header -----*/
+
+.header--absolute {
+
+    position: absolute;
 }
