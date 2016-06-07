@@ -403,6 +403,13 @@ footer p a:hover:after {
 .comment-section {
     margin: 0 auto
 }
+
+.comment-section p {
+    text-shadow: .5px 1.5px green, -1px -1.5px red;
+}
+.musicplayer:hover player .comment-section p {
+    text-shadow: 0px;
+}
 @media screen and (max-width: 40em) {
     .music-player {
         border: 0px;
