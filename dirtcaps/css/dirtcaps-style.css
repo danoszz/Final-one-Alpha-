@@ -1,4 +1,4 @@
-* {
+    * {
     box-sizing: border-box;
 }
 
@@ -112,47 +112,41 @@ h1 + a:hover {
     transition: all 0.3s linear;
     text-shadow: rgb(0, 220, 147) 1px 1px, rgb(0, 220, 147) 2px 2px, rgb(0, 220, 147) 3px 3px, rgb(0, 220, 147) 4px 4px, rgb(0, 220, 147) 5px 5px;
 }
-
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: white;;
+    background-color: white;
+    ;
     color: black;
     font-size: 0.9em;
     text-align: justify;
 }
-
 footer p {
-
     margin: 5em 2em;
     font-weight: 300;
     max-width: 60em;
 }
-
 footer p a {
-
     text-decoration: none;
     position: relative;
     color: #4C00EC;
     -webkit-transition: 0.5s ease;
-            transition: 0.5s ease;
+    transition: 0.5s ease;
 }
-
 footer p a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  border-bottom: 2px solid #4C00EC;
-   -webkit-transition: 0.5s ease;
-            transition: 0.5s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #4C00EC;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
 }
-
 footer p a:hover:after {
-  width: 100%;
+    width: 100%;
 }
 
 /* Important Styles */
@@ -162,7 +156,7 @@ footer p a:hover:after {
     margin: 0;
     position: relative;
 }
-.images .overlay {
+.overlay {
     position: absolute;
     top: 0;
     right: 0;
@@ -277,7 +271,7 @@ footer p a:hover:after {
     align-items: center;
     justify-content: center;
 }
-@media screen and (max-width: 30.5em) {
+@media screen and (max-width: 40em) {
     .grid-item--flex {
         width: 100%;
     }
@@ -286,3 +280,138 @@ footer p a:hover:after {
         height: 100%;
     }
 }
+
+/* Music Board */
+
+.music-player {
+    position: relative;
+    overflow: hidden;
+    border: solid black 5px;
+    max-height: 500px;
+    transition: all 0.3s linear;
+
+}
+.music-player:hover {
+    transition: all 0.3s linear;
+    box-shadow: rgb(0, 220, 147) 1px 1px, rgb(0, 220, 147) 2px 2px, rgb(0, 220, 147) 3px 3px, rgb(0, 220, 147) 4px 4px, rgb(0, 220, 147) 5px 5px, rgb(0, 220, 147) 6px 6px, rgb(0, 220, 147) 7px 7px, rgb(0, 220, 147) 8px 8px, rgb(0, 220, 147) 9px 9px, rgb(0, 220, 147) 10px 10px, rgb(0, 220, 147) 11px 11px, rgb(0, 220, 147) 12px 12px, rgb(0, 220, 147) 13px 13px, rgb(0, 220, 147) 14px 14px, rgb(0, 220, 147) 15px 15px, rgb(0, 220, 147) 16px 16px, rgb(0, 220, 147) 17px 17px, rgb(0, 220, 147) 18px 18px, rgb(0, 220, 147) 19px 19px, rgb(0, 220, 147) 20px 20px, rgb(0, 220, 147) 21px 21px, rgb(0, 220, 147) 22px 22px, rgb(0, 220, 147) 23px 23px, rgb(0, 220, 147) 24px 24px, rgb(0, 220, 147) 25px 25px, rgb(0, 220, 147) 26px 26px, rgb(0, 220, 147) 27px 27px, rgb(0, 220, 147) 28px 28px, rgb(0, 220, 147) 29px 29px, rgb(0, 220, 147) 30px 30px, rgb(0, 220, 147) 31px 31px, rgb(0, 220, 147) 32px 32px, rgb(0, 220, 147) 33px 33px, rgb(0, 220, 147) 34px 34px, rgb(0, 220, 147) 35px 35px, rgb(0, 220, 147) 36px 36px, rgb(0, 220, 147) 37px 37px, rgb(0, 220, 147) 38px 38px, rgb(0, 220, 147) 39px 39px, rgb(0, 220, 147) 40px 40px, rgb(0, 220, 147) 41px 41px, rgb(0, 220, 147) 42px 42px, rgb(0, 220, 147) 43px 43px, rgb(0, 220, 147) 44px 44px, rgb(0, 220, 147) 45px 45px, rgb(0, 220, 147) 46px 46px, rgb(0, 220, 147) 47px 47px, rgb(0, 220, 147) 48px 48px, rgb(0, 220, 147) 49px 49px, rgb(0, 220, 147) 50px 50px;
+    transform: translate(-50px, -50px);
+}
+.player {
+    border: 50px solid black;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+
+}
+.player--soundcloud {
+    border-color: orangered;
+    background-color: orangered;
+}
+.player--spotify {
+    border-color: #1ed760;
+    background-color: #1ed760;
+}
+.player--youtube {
+    border-color: #e62117;
+    background-color: #e62117;
+}
+.comment-section {
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+}
+.sc-background-light {
+    display: none!important;
+}
+.comment-section {
+    margin: 0 auto
+}
+@media screen and (max-width: 40em) {
+    .music-player {
+        border: 0px;
+    }
+}
+
+/*----- Warp shit -----*/
+
+iframe {
+    animation: blur 30ms infinite, flickSmall 50ms infinite, jumpSmall 4s infinite;
+}
+
+
+@keyframes blur {
+    0% {
+        filter: blur(1px);
+        opacity: 0.8;
+    }
+    50% {
+        filter: blur(1px);
+        opacity: 1;
+    }
+    100% {
+        filter: blur(1px);
+        opacity: 0.8;
+    }
+}
+@keyframes flick {
+    50% {
+        transform: translateX(2px);
+    }
+    51% {
+        transform: translateX(0);
+    }
+}
+@keyframes flickSmall {
+    50% {
+        transform: translateX(.5px);
+    }
+    51% {
+        transform: translateX(0);
+    }
+}
+@keyframes jump {
+    30% {
+        transform: translateY(10px);
+    }
+    31% {
+        transform: translateY(0);
+    }
+}
+    @keyframes jumpSmall {
+        30% {
+            transform: translateY(2px);
+        }
+        31% {
+            transform: translateY(0);
+        }
+    }
+    /*
+    From Greg Opperman
+    http://codepen.io/gopperman/pen/dElzr?editors=001
+*/
+    @keyframes track {
+        40% {
+            opacity: 1;
+            transform: translate3D(0, 0, 0);
+            transform: scale(1, 1);
+            transform: skew(0, 0);
+        }
+        41% {
+            opacity: 0.8;
+            transform: translate3D(-70px, 0, 0);
+            transform: scale(1, 1.2);
+            transform: skew(50deg, 0);
+        }
+        42% {
+            opacity: 0.8;
+            transform: translate3D(70px, 0, 0);
+            transform: scale(1, 1.2);
+            transform: skew(-80deg, 0);
+        }
+        43% {
+            opacity: 1;
+            transform: translate3D(0, 0, 0);
+            transform: scale(1, 1);
+            transform: skew(0, 0);
+        }
+    }
