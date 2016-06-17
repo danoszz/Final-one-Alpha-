@@ -1,0 +1,143 @@
+html,
+body {
+  background: #000;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.marquee {
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+    -webkit-animation: track 5ms infinite;
+            animation: track 5ms infinite;
+}
+svg {
+  display: block;
+  -webkit-animation: blur 60s infinite;
+          animation: blur 60s infinite;
+}
+.logo {
+  fill: #fff;
+}
+
+    @-webkit-keyframes blur {
+        0% {
+            -webkit-filter: blur(0px);
+                    filter: blur(0px);
+            opacity: 0.9;
+        }
+        50% {
+            -webkit-filter: blur(1px);
+                    filter: blur(1px);
+            opacity: 1;
+        }
+        100% {
+            -webkit-filter: blur(0px);
+                    filter: blur(0px);
+            opacity: 0.8;
+        }
+    }
+
+    @keyframes blur {
+        0% {
+            -webkit-filter: blur(0px);
+                    filter: blur(0px);
+            opacity: 0.9;
+        }
+        50% {
+            -webkit-filter: blur(1px);
+                    filter: blur(1px);
+            opacity: 1;
+        }
+        100% {
+            -webkit-filter: blur(0px);
+                    filter: blur(0px);
+            opacity: 0.8;
+        }
+    }
+
+/*
+// From Greg Opperman
+// http://codepen.io/gopperman/pen/dElzr?editors=001
+*/
+    @-webkit-keyframes track {
+        40% {
+            opacity: 1;
+            -webkit-transform: translate3D(0, 0, 0);
+                    transform: translate3D(0, 0, 0);
+            -webkit-transform: scale(1, 1);
+                    transform: scale(1, 1);
+            -webkit-transform: skew(0, 0);
+                    transform: skew(0, 0);
+        }
+        41% {
+            opacity: 0.8;
+            -webkit-transform: translate3D(-30px, 0, 0);
+                    transform: translate3D(-30px, 0, 0);
+            -webkit-transform: scale(1, 1.16);
+                    transform: scale(1, 1.16);
+            -webkit-transform: skew(40deg, 0);
+                    transform: skew(40deg, 0);
+        }
+        42% {
+            opacity: 0.8;
+            -webkit-transform: translate3D(40px, 0, 0);
+                    transform: translate3D(40px, 0, 0);
+            -webkit-transform: scale(1, 1.13);
+                    transform: scale(1, 1.13);
+            -webkit-transform: skew(-90deg, 0);
+                    transform: skew(-90deg, 0);
+        }
+        43% {
+            opacity: 1;
+            -webkit-transform: translate3D(0, 0, 0);
+                    transform: translate3D(0, 0, 0);
+            -webkit-transform: scale(1, 1);
+                    transform: scale(1, 1);
+            -webkit-transform: skew(0, 0);
+                    transform: skew(0, 0);
+        }
+    }
+    @keyframes track {
+        40% {
+            opacity: 1;
+            -webkit-transform: translate3D(0, 0, 0);
+                    transform: translate3D(0, 0, 0);
+            -webkit-transform: scale(1, 1);
+                    transform: scale(1, 1);
+            -webkit-transform: skew(0, 0);
+                    transform: skew(0, 0);
+        }
+        41% {
+            opacity: 0.8;
+            -webkit-transform: translate3D(-30px, 0, 0);
+                    transform: translate3D(-30px, 0, 0);
+            -webkit-transform: scale(1, 1.16);
+                    transform: scale(1, 1.16);
+            -webkit-transform: skew(40deg, 0);
+                    transform: skew(40deg, 0);
+        }
+        42% {
+            opacity: 0.8;
+            -webkit-transform: translate3D(40px, 0, 0);
+                    transform: translate3D(40px, 0, 0);
+            -webkit-transform: scale(1, 1.13);
+                    transform: scale(1, 1.13);
+            -webkit-transform: skew(-90deg, 0);
+                    transform: skew(-90deg, 0);
+        }
+        43% {
+            opacity: 1;
+            -webkit-transform: translate3D(0, 0, 0);
+                    transform: translate3D(0, 0, 0);
+            -webkit-transform: scale(1, 1);
+                    transform: scale(1, 1);
+            -webkit-transform: skew(0, 0);
+                    transform: skew(0, 0);
+        }
+    }
