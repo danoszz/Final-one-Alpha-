@@ -1,5 +1,6 @@
 /* Copyright 2015 Daan van der Zwaag */
 /* Old Green: 00EC9A */
+/* Old Gradient:  linear-gradient(to top, #4c00ec, #3E109F); */
 
 
 /* Fonts */
@@ -36,8 +37,7 @@ body {
     overflow-x: hidden;
      -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    /*
-    background-color: rgba(76, 0, 236, 0.05); */
+
 }
 
 main {
@@ -53,8 +53,8 @@ main {
 
 body {
 
-    border-left: 30px solid #4c00ec;
-    border-right: 30px solid #4c00ec;
+    border-left: 30px solid #0000ED;
+    border-right: 30px solid #0000ED;
     -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -64,7 +64,7 @@ body:before, body:after {
 
     content: "";
     position: fixed;
-    background: #4c00ec;
+    background: #0000ED;
     left: 0;
     right: 0;
     height: 30px;
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 
     font-family: 'Geometric_706', 'Helvetica';
     font-weight: 300;
-    color: #4C00EC;
+    color: #0000ED;
 }
 
 header > div > h1 {
@@ -279,9 +279,7 @@ h1 + p {
 
 .header-inverted {
 
-    background: -webkit-linear-gradient(bottom, #4c00ec, #3E109F);
-    background: -o-linear-gradient(bottom, #4c00ec, #3E109F);
-    background: linear-gradient(to top, #4c00ec, #3E109F);
+    background-color: #0000ED;
     height: 80vh;
     position: relative;
     transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -306,7 +304,7 @@ h1 + p {
     left: 80%;
     width: 0;
     height: 0;
-    border-top: solid 50px #4c00ec;
+    border-top: solid 50px #0000ED;
     border-left: solid 50px transparent;
     border-right: solid 50px transparent;
     transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -329,7 +327,7 @@ h1 + p {
     .header-inverted:after {
 
     left: 70%;
-    border-top: solid 35px #4C00EC;
+    border-top: solid 35px #0000ED;
     border-left: solid 35px transparent;
     border-right: solid 35px transparent;
     }
@@ -350,7 +348,7 @@ h1 + p {
     .header-inverted:after {
 
     left: 70%;
-    border-top: solid 20px #4C00EC;
+    border-top: solid 20px #0000ED;
     border-left: solid 20px transparent;
     border-right: solid 20px transparent;
     }
@@ -371,9 +369,9 @@ a {
 
     padding: 2% 5%;
     text-decoration: none;
-    color: #4C00EC;
+    color: #0000ED;
     background-color: #fff;
-    border: 3.5px solid #4C00EC;
+    border: 3.5px solid #0000ED;
     border-radius: 0px;
     font-weight: 500;
     font-size: 0.9em;
@@ -385,7 +383,7 @@ a {
 .btn:focus {
 
     outline: none;
-    background-color: #4C00EC;
+    background-color: #0000ED;
     color: #fff;
     -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -411,7 +409,7 @@ a {
 
     outline: none;
     background-color: #fff;
-    color: #4C00EC;
+    color: #0000ED;
     border-color: #fff;
     -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -441,7 +439,7 @@ p > a {
 
     text-decoration: none;
     position: relative;
-    color: #4C00EC;
+    color: #0000ED;
     -webkit-transition: 0.5s ease;
             transition: 0.5s ease;
 }
@@ -452,7 +450,7 @@ p > a:after {
   bottom: 0;
   left: 0;
   width: 0%;
-  border-bottom: 2px solid #4C00EC;
+  border-bottom: 2px solid #0000ED;
    -webkit-transition: 0.5s ease;
             transition: 0.5s ease;
 }
@@ -483,9 +481,7 @@ p > a:hover:after {
     top: 0;
     right: 0;
     left: 0;
-    background: -webkit-linear-gradient(bottom, #3E109F, #4c00ec);
-    background: -o-linear-gradient(bottom, #3E109F, #4c00ec);
-    background: linear-gradient(to top, #3E109F, #4c00ec);
+    background-color: #0000ED;
     z-index: 2;
 }
 
@@ -641,7 +637,7 @@ p > a:hover:after {
   padding: 0;
   width: 50px;
   height: 50px;
-  background-color: #4C00EC;
+  background-color: #0000ED;
   font: inherit;
   font-size: 0;
   text-indent: -9999px;
@@ -881,7 +877,7 @@ img {
 
 #tldrClick {
 
-    color: #4C00EC;
+    color: #0000ED;
     cursor: pointer;
 
 }
@@ -911,7 +907,7 @@ img {
     bottom: 0;
     width: 5px;
     left: 20px;
-    background: #4C00EC;
+    background: #0000ED;
 }
 
 
@@ -955,7 +951,7 @@ img {
     color: #fff;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 5px #4C00EC;
+    box-shadow: 0 0 0 5px #0000ED;
     text-align: center;
     top: 0;
     left: 12.5px;
@@ -967,7 +963,7 @@ img {
 .small-timeline > li:nth-child(1) .timeline-circle  {
 
 
-    background: #4C00EC;
+    background: #0000ED;
 
 }
 
@@ -976,7 +972,7 @@ img {
     width: 20px;
     height: 5px;
     position: absolute;
-    background: #4C00EC;
+    background: #0000ED;
     text-align: center;
     left: 12.5px;
 
@@ -990,7 +986,7 @@ img {
     top: 0;
     right: 0;
     position: absolute;
-    background: #4C00EC;
+    background: #0000ED;
     text-align: center;
     margin-top: 12.5px;
 
@@ -1012,7 +1008,7 @@ img {
     background: #fff;
     border-radius: 50%;
     margin-top: 5px;
-    box-shadow: 0 0 0 5px #4C00EC;
+    box-shadow: 0 0 0 5px #0000ED;
     text-align: center;
     top: 0;
     left: 5px;
@@ -1073,7 +1069,7 @@ input.dvdz-toggle + label {
   width: 100%;
   height: 3.5rem;
   background-color: transparent;
-  border: 5px #4C00EC solid;
+  border: 5px #0000ED solid;
   transition: background 0.4s;
 }
 input.dvdz-toggle + label:before,
@@ -1095,7 +1091,7 @@ input.dvdz-toggle + label:before {
   right: 5px;
   padding-left: 17.5%;
   content: attr(data-on);
-  color: #4C00EC;
+  color: #0000ED;
   backface-visibility: hidden;
   transition: background 0.4s;
 }
@@ -1104,7 +1100,7 @@ input.dvdz-toggle + label:after {
   left: 5px;
   bottom: 5px;
   width: 50%;
-  background-color: #4C00EC;
+  background-color: #0000ED;
   color: #fff;
   text-align: center;
   content: attr(data-off);
@@ -1122,16 +1118,14 @@ input.dvdz-toggle:checked + label:after {
     margin-left: -webkit-calc(50% - 10px);
     margin-left: -o-calc(50% - 10px);
     margin-left: calc(50% - 10px);
-    background-color: #4C00EC;
+    background-color: #0000ED;
     color: transparent;
 
 }
 
 input.dvdz-toggle + label:hover::after {
 
-    background: -webkit-linear-gradient(left, #4c00ec, #23006c);
-    background: -o-linear-gradient(left, #4c00ec, #23006c);
-    background: linear-gradient(to right, #4c00ec, #23006c);
+    background-color: #0000ED;
 
 }
 
@@ -1241,10 +1235,12 @@ body > main > section > div.two-third {
 
     height: 1.5rem;
     background-color: #fff;
-    border: 2.5px solid transparent;
-    -moz-border-image: -webkit-linear-gradient(left, #4c00ec, #23006c);
-    -webkit-border-image: -o-linear-gradient(left, #4c00ec, #23006c);
-    border-image: linear-gradient(to right, #4c00ec, #23006c);
+    border: 2.5px solid #0000ED;
+/*
+    -moz-border-image: -webkit-linear-gradient(left, #0000ED, #23006c);
+    -webkit-border-image: -o-linear-gradient(left, #0000ED, #23006c);
+    border-image: linear-gradient(to right, #0000ED, #23006c);
+*/
     border-image-slice: 1;
     transition: background 0.4s;
 
@@ -1253,9 +1249,7 @@ body > main > section > div.two-third {
 progress {
 
 
-    background: -webkit-linear-gradient(left, #4c00ec, #23006c);
-    background: -o-linear-gradient(left, #4c00ec, #23006c);
-    background: linear-gradient(to right, #4c00ec, #23006c);
+   background-color: #0000ED;
     height: 100%;
     width: 100%;
     transition: background 0.4s;
@@ -1266,9 +1260,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background: -webkit-linear-gradient(left, #4c00ec, #23006c);
-    background: -o-linear-gradient(left, #4c00ec, #23006c);
-    background: linear-gradient(to right, #4c00ec, #23006c);
+    background-color: #0000ED;
 
 }
 
@@ -1374,9 +1366,7 @@ progress::-moz-progress-bar {
 
 .home {
 
-    background: -webkit-linear-gradient(bottom, #4c00ec, #3E109F);
-    background: -o-linear-gradient(bottom, #4c00ec, #3E109F);
-    background: linear-gradient(to top, #4c00ec, #3E109F);
+    background-color: #0000ED;
     height: 100%;
     position: relative;
     transition: all 400ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -1578,7 +1568,7 @@ figure {
     position: relative;
     margin: 0;
     overflow: hidden;
-    background: #4c00ec;
+    background: #0000ED;
     text-align: center;
     cursor: pointer;
 }
@@ -2096,9 +2086,7 @@ li.nav-categories-list-item.next-item > a:hover {
 
 .gradient-bg {
 
-    background: -webkit-linear-gradient(bottom, #4c00ec, #3E109F);
-    background: -o-linear-gradient(bottom, #4c00ec, #3E109F);
-    background: linear-gradient(to top, #4c00ec, #3E109F);
+   background-color: #0000ED;
 }
 
 
@@ -2227,7 +2215,7 @@ li.nav-categories-list-item.next-item > a:hover {
 
 .nav-footer-text a:hover {
 
-    color: #4c00ec;
+    color: #0000ED;
     font-weight: 300;
 
 }
@@ -2268,7 +2256,7 @@ li.nav-categories-list-item.next-item > a:hover {
 
 .breezer-ananas .btn-inverted:hover {
 
-    background-color: #4C00EC;
+    background-color: #0000ED;
     color: #fff;
 }
 .btn-group {
@@ -2480,7 +2468,7 @@ li.nav-categories-list-item.next-item > a:hover {
 .ns-box a {
     color: inherit;
     opacity: 0.7;
-    color: #4c00ec;
+    color: #0000ED;
 }
 
 .ns-box a:hover,
@@ -2591,7 +2579,7 @@ li.nav-categories-list-item.next-item > a:hover {
 
 .ns-effect-exploader .ns-close:hover::before,
 .ns-effect-exploader .ns-close:hover::after {
-    background: #4c00ec;
+    background: #0000ED;
 }
 
 .ns-effect-exploader.ns-show {
